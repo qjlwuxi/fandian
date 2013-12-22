@@ -1,0 +1,13 @@
+<p>
+  <b>Order:</b>
+  <%=h @order_log.order_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @order_log.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_log_path(@order_log) %> |
+<%= link_to 'Back', order_logs_path %>

@@ -1,0 +1,22 @@
+<h1>Listing order_logs</h1>
+
+<table>
+  <tr>
+    <th>Order</th>
+    <th>Content</th>
+  </tr>
+
+<% @order_logs.each do |order_log| %>
+  <tr>
+    <td><%=h order_log.order_id %></td>
+    <td><%=h order_log.content %></td>
+    <td><%= link_to 'Show', order_log %></td>
+    <td><%= link_to 'Edit', edit_order_log_path(order_log) %></td>
+    <td><%= link_to 'Destroy', order_log, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New order_log', new_order_log_path %>

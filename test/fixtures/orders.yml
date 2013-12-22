@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_num: MyString
+  original_price: 1.5
+  current_price: 1.5
+  phone: MyString
+  address: MyString
+  state: MyString
+  user_id: 1
+  area_id: 1
+  shop_id: 1
+
+two:
+  order_num: MyString
+  original_price: 1.5
+  current_price: 1.5
+  phone: MyString
+  address: MyString
+  state: MyString
+  user_id: 1
+  area_id: 1
+  shop_id: 1

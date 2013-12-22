@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  shop_id: 
+  start_time: MyString
+  end_time: MyString
+
+two:
+  shop_id: 
+  start_time: MyString
+  end_time: MyString

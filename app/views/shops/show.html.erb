@@ -1,0 +1,443 @@
+<%= javascript_include_tag "jquery-1.7.1.min.js" %>
+<%= javascript_include_tag "areas/search" %>
+<%= javascript_include_tag "areas/top_js" %>
+<%= javascript_include_tag "jquery.cookie" %>
+<%= javascript_include_tag "shops/show" %>
+<%= javascript_include_tag "areas/recommendSup.js?v4.1.7" %>
+<%= javascript_include_tag "jquery.XYTipsWindow.2.8.js" %>
+<%= javascript_include_tag "areas/common" %>
+<%= javascript_include_tag "json" %>
+<%= javascript_include_tag "SupCarInfo.js?v4.1.7" %>
+<%= javascript_include_tag "food.js?v4.1.7" %>
+<%= javascript_include_tag "operate_cart.js?v4.1.7" %>
+<form method="post" action=<%= @shop.id%> id="form1">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTMyNjA1ODkzNw8WAh4Fc3VwSUQCFmRk" />
+    </div>
+    <div id="top">
+        <div id="top_inner">
+            <a class="logo" href="/home"><img src="../images/tranlogo.png"></a>
+            <div id="top_quickmenu" class="quick_menu">
+                <dl>
+                    <dd>
+                        <a id="top_MyOrderLink" class="MyOrderLink" href="#">我的订单</a>
+                    </dd>
+                    <dd class="all_mess">
+                        <span id="top_notification" class="notification"><b class="message_prompt">&nbsp;</b><span id="top_num" class="num" style="display:none;">0</span>
+                            <div id="top_MessageContent" class="layer_top_account layer_top_Message br4 shadow " style="display: none">
+                                <span class="arrow"></span>
+                                <ul id="top_MessageBox" class="MessageBox">
+                                    <li class='No_Message_Type'>
+                                        <div>
+                                            今日没有消息
+                                        </div>
+                                    </li>
+                                    <li class='btn clearfix noPointer'>
+                                        <input type='submit' class='setallmessage' value='知道了'>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                    </dd>
+                    <dd id="top_top_user" class="Newaccount">
+                        <div class="login_regist">
+                            <a href="http://kaichiba.com/member/login" class="log_btn">登录</a>
+                            <span>|</span>
+                            <a href="http://kaichiba.com/member/register" class="log_btn">注册</a>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div id="search" class="fr br3">
+                <input id="keyword" type="text" onkeydown="enterIn(event)" value="搜索餐厅、美食" autocomplete="off" /><a class="serch_btn_a" href="javascript:searchClick();">搜索</a>
+                <div class="searchRes" id="searchRes">
+                </div>
+            </div>
+            <!--end of quickmenu-->
+        </div>
+    </div>
+    <div class="shade" id="shade" style="display: none; opacity: 0.8; filter: alpha(opacity=80);">
+        &nbsp;
+    </div>
+    <div class="urgency_message" noticeid="" style="display: none">
+        <div class="urgency_message_top">
+            <h2 class="urgency_message_top_title">紧急通知</h2>
+            <p class="urgency_message_show">
+                您的电话<span id="UserPhone">15839382938</span>拨打不通，送餐员联系不上您，非常着急，请及时检查，保持电话畅通！！
+            </p>
+        </div>
+        <div class="urgency_message_bottom">
+            <a href="javascript:;" class="return_message">好的，我已经联系送餐员</a>
+        </div>
+    </div>
+    <!--end of top--><input type="hidden" value="http://kaichiba.com/ajax" id="ajaxUrl" /><!--end of top-->
+    <div id="wrap">
+        <!--end of header-->
+        <div id="container" class="clearfix">
+            <div id="attentionInfo" class="clearfix">
+                <div class="attention br8 rest">
+                    <p>
+                        餐厅已打烊，不用担心，已经成功下的订单均有效，<a href='../personal/iTodayOrder.aspx'>点击此处查看订单状态</a>:)
+                    </p>
+                </div>
+                <div class="attention br8 call">
+                    <p>
+                        餐厅当前网络不稳定，仅限电话订餐，选择美食后可以查看餐厅电话:)
+                    </p>
+                </div>
+                <div class="attention br8 busy">
+                    <p>
+                        该餐厅实在太忙，为了保证服务质量，暂时停止接受新订单。不用担心，已经成功下的订单均有效:)
+                    </p>
+                </div>
+                <div class="attention br8 vacation">
+                    <p>
+                        该餐厅已休假，这段时间无法提供外卖服务，看看其他餐厅吧！:)
+                    </p>
+                </div>
+                <div class="attention br8 location">
+                    <p>
+                        尚未确定您的位置！ <a class="tip-button" href="../CommomPage/c.aspx?CleanType=1">选择位置</a>
+                    </p>
+                </div>
+                <div class="attention br8 warn">
+                    <p>
+                        当前餐厅并不提供您当前所在位置的外卖服务<a class="tip-button" href="#" onclick="javascript:location.href='../area/'+$.cookie('uniID');return false;">重新选择餐厅</a>
+                    </p>
+                </div>
+            </div>
+            <div id="school">
+                <a href=""></a>
+                <a href="">[切换位置]</a>
+                <span>/</span>
+                <em><%= @shop.name%></em>
+            </div>
+            <div id="rank" class="clearfix">
+            </div>
+            <div id="shopOverall" class="shadow">
+                <div class="l fl">
+                    <div class="clearfix fl shop_intro">
+                        <p class="send_price">
+                            <b>起送价：</b>
+                            <%= @shop.send_food_price %>元
+                        </p>
+                        <p>
+                            <b>送餐说明：</b>
+                            <%= truncate(@shop.supplier_remark,45) %><a href='javascript:void(0);' class='blue' id='supIntrodetail'>详情&gt;</a>
+                        </p>
+                        <div id="supIntroDetail">
+                            <b>送餐说明：</b>
+                            <%= @shop.supplier_remark %>
+                            <p>
+                                <a href="javascript:void(0);" id="hide_supIntrodetail">< 收起</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--end of l-->
+                <div class="r fr">
+                    <p class="fl">
+                        <b>送餐速度：</b>
+                        <%= @shop.send_food_rate %>分钟
+                    </p>
+                    <p>
+                        <b>送餐时间：</b>
+                        <%= @shop.shop_hours.collect{|s| s.start_time + '至' + s.end_time}.join(',') %>
+                    </p>
+                    <p style="margin-top:4px;">
+                        <b>餐厅地址：</b>
+                        <%= @shop.name %>
+                    </p>
+                </div>
+                <!--end of r-->
+            </div>
+            <!--end of shopOverall-->
+            <div class="clearfix">
+                <div id="left" class="shadow s_menu">
+                    <div id="s_tab">
+                        <a href="/shop/<%= @shop.id%>" class="active">看菜单</a>
+                        <a href="/shop/comment/<%= @shop.id%>">累积评价</a>
+                        <a href="/shop/message/<%= @shop.id%>">给餐厅留言</a>
+                    </div>
+                    <div id="menuCategory" class="mt10">
+                        <ul id="FoodTypeList" style="bottom:30px;" class="clearfix">
+                            <li id="0" class="active">
+                                <a href="javascript:void(0)">全部类别</a>
+                            </li>
+                            <% if @food_types %>
+                            	<% @food_types.each do |ft| %>
+                            		<li id=<%= ft.id %>>
+                                		<a href="javascript:void(0)"><%= ft.name %></a>
+                            		</li>
+                            	<% end %>
+                            <% end %>
+                        </ul>
+                    </div>
+                    <!--end of menuCategory-->
+                    <div id="scrollPager">
+						<% @food_types.each do |ft| %>
+							<div class="foodList clearfix">
+								<h3 class="foodList_title" FoodTypeID=<%= ft.id %>><%= ft.name%></h3>
+								<div class="foodListImg">
+	                        		<table cellpadding="0" cellspacing="0">
+	                        		</table>
+	                    		</div>
+								<% ft.enable_foods.each do |food| %>
+									<!--菜品列表-->
+									<div class="foodListItem" id="liFood_<%= food.id%>" food-foodid=<%= food.id%> food-foodname=<%= food.name%> food-supid=<%= food.food_type.shop.id%> food-typeid=<%= food.food_type.id%> food-price=<%= food.price%> food-foodstate=<%= food.food_state%> food-foodunit=<%= food.food_unit%> food-supname=<%= food.food_type.shop.name%> food-businessstate="1" food-businessmode="1" food-supsendprice=<%= food.food_type.shop.send_food_price%> food-activitystate=<%= food.activity_state%>>
+										<ul class="foodListInfo">
+											<li class="foodTitle">
+												<%= food.name%><span>(<%= food.food_unit%>)</span>
+												<% if food.is_new %>
+													<img src="/images/foodType_new.png" alt="新品菜" title="新菜品" />
+												<% end %>
+												<% if food.is_sign %>
+													<img src="/images/foodType_sign.png" alt="招牌菜" title="招牌菜" />
+												<% end %>
+												<% if food.is_hot %>
+													<img src="/images/foodType_hot.png" alt="辣" title="辣" />
+												<% end %>
+												<% if food.original_price and food.original_price > food.price %>
+													<span class='web_s'>特价</span>   
+												<% end %>
+                                    		</li>
+                                    		<li class="price_outer">
+                                    			<% if food.original_price and food.original_price > food.price %>
+													<del><%= food.original_price%></del>
+												<% end %>
+                                        		<span class="foodPrice"><%= food.price%></span>元
+                                    		</li>
+											<% if @shop.check_hour %>
+												<li>
+                                        			<span style='display:' class=addToOrder>正常营业</span>
+                                    			</li>
+											<% else %>
+												<li >
+                                    				<span style='display:' class='closed'>打烊</span>
+												</li>
+											<% end %>
+											<p class="description"><%= food.description%>
+                                			</p>
+										</ul>	
+									</div>	
+								<% end %>
+							</div>	
+						<% end %>
+                        <!--end of foodList-->
+                    </div>
+                </div>
+                <!--end of left-->
+                <div id="right">
+                    <div class="right_item shadow" id="onlineOrder" style="margin-top:0;">
+                        <table id="tbltest" cellpadding="0" cellspacing="0" width="270px">
+                            <caption>
+                                美食筐
+                            </caption>
+                            <thead id="OrderHead">
+                                <tr>
+                                    <th class="col1">
+                                        菜品
+                                    </th>
+                                    <th class="col2">
+                                        份数
+                                    </th>
+                                    <th class="col3">
+                                        单价
+                                    </th>
+                                    <th class="col4">
+                                        <a href="javascript:void(0)" id="emptyOrder">清除</a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="OrderBody">
+                            </tbody>
+                            <tfoot id="OrderFoot">
+                                <tr class="last">
+                                    <td colspan="2" class="order_total">
+                                        <p>
+                                            总价
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p id="totalPrice" class="order_price">
+                                        </p>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div id="createOrder">
+                            <a id="ComfirmOrder" href="javascript:;" style="display: none">确认下单</a>
+                            <a id="seeNum" href="javascript:;" style="display: none">查看电话</a>
+                        </div>
+                        <div id="phoneNum" style="display: none">
+                            <p class="phoneNotes">
+                                *请手动拨打该号码订餐哦。您也可以选择支持[在线订餐]的餐厅，无需打电话即可订餐。
+                            </p>
+                            <p class="phone_num">
+                            </p>
+                            <p class="alternate_phone">
+                            </p>
+                            <p class="thrid_phone">
+                            </p>
+                        </div>
+                        <div id="no_send" style="display: none">
+                            <div id="no_send_inner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--菜单分类及纠错-->
+            <div id="aboutMenu">
+                <div id="menuCorrection">
+                    <a href="javascript:void(0)">菜单纠错</a>
+                </div>
+                <!--end of menuCorrection-->
+                <div id="correctHide" style="display: none;">
+                    <div id="corTextarea">
+                        <label>
+                            内容
+                        </label>
+                        <textarea onfocus="if(this.value=='如：价格有误、地址不准确或该店已关闭等等'){this.value='';this.style.color='#000';};">
+                            如：价格有误、地址不准确或该店已关闭等等
+                        </textarea>
+                    </div>
+                    <div id="userMail">
+                        <label>
+                            您的邮箱(选填)
+                        </label>
+                        <input type="text" value="请输入您的邮箱，以便我们能够联系上您" onfocus="if(this.value=='请输入您的邮箱，以便我们能够联系上您'){this.value='';this.style.color='#000';};"/>
+                    </div>
+                    <table class="msgVild">
+                        <tr>
+                            <td>
+                                验证码：
+                            </td>
+                            <td>
+                                <input type="text" class="ValiDateCode corrValiDateCode" maxlength="4" style="width: 60px;"/>
+                            </td>
+                            <td>
+                                <div id="ValidateCode3">
+                                </div>
+                            </td>
+                            <td>
+                                <span id="chgValidCode" style="line-height: 24px;">更换验证码</span>
+                            </td>
+                            <td style="width: 102px;">
+                                <p class="validRs">
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="___dialogBtn fBackBtn">
+                        <input type="button" class="dialogBtn correctBtn" value="提交" /><input type="button" class="dialogBtn hover corCancelBt" value="取消" />
+                    </div>
+                </div><!--end of correctHide-->
+            </div><!--end of aboutMenu--><!--结束菜单分类及纠错-->
+            <div class="to-top" style="display:block">
+                <a href="#" title="回到顶部" class="top">回顶部</a>
+                <a title="选择其它餐厅" class="back">选餐厅</a>
+            </div>
+            <input type="hidden" id="supID" value=<%= @shop.id %> /><input type="hidden" id="businessState" value="1" /><input type="hidden" id="businessMode" value="1" /><input type="hidden" id="needUniCookie" value="" /><input type="hidden" id="foodTypeID" value="0" />
+        </div><!--end of container-->
+        <div class="minLoginBg">
+        </div>
+        <!--页面浮层-->
+        <div class="layer_bg" style="display:none" id="layer">
+        </div>
+        <div id="commentLayer" class="br6" style="display:none">
+            <p class="into_res">
+                <span class="close fr">×</span>即将进入<a class="cr">开吃吧虚拟餐厅</a>餐厅
+            </p>
+            <div class="res_con">
+                <p class="select_area">
+                    请选择您所在区域
+                </p>
+                <div class="university">
+                    <ul>
+                    </ul>
+                </div>
+                <a href="../home" class="change clear">不是您所在的位置？重新选择>></a>
+            </div>
+        </div>
+        <!--结束更改浮层--><!--清空菜品浮层提示-->
+        <div class="shade" id="shadeSup" style="display:none">
+            &nbsp;
+        </div>
+        <div class="clear_cart">
+            <div class="clear_cart_inner">
+                <h1 class="clear_cart_title">请先清空美食筐<a href="javascript:$('.clear_cart,.shade').hide();">×</a></h1>
+                <div class="cart_food">
+                    <p class="cart_food_from">
+                    </p>
+                    <p>
+                        您需要清空美食筐才能挑选其他餐厅的美食哦~
+                    </p>
+                </div>
+                <div class="do_clear_cart clearfix">
+                    <a href="javascript:void()" class="do_not_clear">我先看看</a>
+                    <a href="javascript:void()" class="do_clear">清空美食筐</a>
+                </div>
+            </div>
+        </div>
+        <!--清空菜品浮层提示结束-->
+        <div id="feedback_btn">
+        </div>
+        <div id="MsgHide" style="display: none;">
+            <div id="feedbackTip">
+                <label>
+                    小提示：催单请进入相应餐厅的页面进行留言，这样餐厅就能看见哦~
+                </label>
+                <textarea id="feedBackTipContent">
+                </textarea>
+            </div>
+            <div id="isVisitor" style="display:none;">
+                <label>
+                    您的邮箱(选填)
+                </label>
+                <input type="text" id="visitorMail" />
+            </div>
+            <p id="isUser">
+                我们的回复将发到个人中心的“问题反馈”里，请注意关注，感谢您的建议。
+            </p>
+            <table class="msgVild fBackVali">
+                <tr>
+                    <td>
+                        验证码：
+                    </td>
+                    <td>
+                        <input type="text" id="fBackValiDateCode" class="ValiDateCode fBackValiDateCode" maxlength="4" style="width: 60px;"/>
+                    </td>
+                    <td>
+                        <div id="ValidateCode">
+                        </div>
+                    </td>
+                    <td>
+                        <span id="ValidateCodeClick_fBack" style="line-height: 24px;">更换验证码</span>
+                    </td>
+                    <td style="width: 102px;">
+                        <p class="validRs fBackValiRs">
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <div class="___dialogBtn fBackBtn">
+                <input type="button" class="dialogBtn feedBackBt" value="提交" /><input type="button" class="dialogBtn hover fCancelBt" value="取消" />
+            </div>
+        </div>
+        <div id="footer">
+            <p>
+                <a href="http://kaichiba.com/about/fAbout" rel="nofollow">关于我们</a>|<a href="http://kaichiba.com/about/fRecruit" rel="nofollow">招贤纳士</a>|<a href="http://kaichiba.com/about/fHelp" rel="nofollow">帮助中心</a>|<a href="http://m.kaichiba.com" target="_blank" rel="nofollow">手机HTML5版</a>|<a href="http://wap.kaichiba.com" target="_blank" rel="nofollow">手机WAP版</a>|<a href="http://shop.kaichiba.com" target="_blank" rel="nofollow">餐厅登录</a>|<a href="http://blog.kaichiba.com" target="_blank">美食谭</a>
+                |<a href="http://ls.kaichiba.com" target="_blank">零食吧</a>
+            </p>
+            <hr/>
+            <p>
+                Copyright © 2011-2013 开吃吧 All Rights Reserved 京ICP备12015678号 | 京公网安备110114001132号
+            </p>
+        </div>
+        <!--end of footer--><input name="ctl00$Footer1$hid_IspromoteUser" type="hidden" id="hid_IspromoteUser" value="False" />
+    </div><!--end of wrap-->
+    <script id="iDealKCBVisitRecord" src="/javascripts/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" type="text/javascript">
+</form>

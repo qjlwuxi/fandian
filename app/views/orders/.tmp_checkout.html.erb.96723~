@@ -1,0 +1,257 @@
+<div id="wrap" style="width: 750px;">
+    <div class="order_head">
+        <%= javascript_include_tag "jquery-1.7.1.min.js" %>
+        <%= javascript_include_tag "areas/search" %>
+        <%= javascript_include_tag "areas/top_js" %>
+        <div class="small_l_r clearfix quick_menu">
+            <span id="Min_Top_notification" class="small_message clearfix notification"><b class="message_bell">&nbsp;</b><span id="Min_Top_num" class="num" style="display:none;"></span>
+                <div id="Min_Top_MessageContent" class="layer_top_account layer_top_Message br4 shadow " style="display: none">
+                    <span class="arrow"></span>
+                    <ul id="Min_Top_MessageBox" class="MessageBox">
+                        <li>
+                            <div>
+                                今日没有消息
+                            </div>
+                        </li>
+                        <li class='btn clearfix noPointer'>
+                            <input type='submit' class='setallmessage' value='知道了'>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            <div id="Min_Top_top_user" class="l_r_con login_regist">
+                <a href="http://kaichiba.com/member/login">登录</a>
+                |<a href="http://kaichiba.com/member/register">注册</a>
+            </div>
+        </div>
+        <!--end of top--><input type="hidden" value="http://kaichiba.com/ajax" id="ajaxUrl" /><a href="http://kaichiba.com/area/1"><img src="../images/base/little-logo.png" width="106" height="30" alt="logo"></a><h2 class="buy_title">订单确认</h2>
+    </div>
+    <div id="order" class="shadow">
+        <div class="order_top clearfix">
+            <ul class="clearfix buy_item fr">
+                <li>
+                    1.选择美食
+                </li>
+                <li>
+                    3.完成订单
+                </li>
+                <li>
+                    2.确认订单
+                </li>
+                <li class="buy_item_last">
+                    &nbsp;
+                </li>
+            </ul>
+            <img src=<%= @shop.logo_path%> alt="" width="45px" height="45px" class="fl"/>
+            <p>
+                <a id="Supplier_id" SupID=<%= @shop.id%> href='/shop/<%= @shop.id%>'><%= @shop.name %></a>
+            </p>
+            <p>
+                起送价：<%= @shop.send_food_price %>元起送！
+            </p>
+        </div>
+        <p class="restaurant_explain">
+            送餐说明：<%= @shop.supplier_remark %>
+        </p>
+        <table cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <td class="col1">
+                        美食筐
+                    </td>
+                    <td class="col2">
+                        单价
+                    </td>
+                    <td class="col3">
+                        数量
+                    </td>
+                    <td class="col4">
+                        总计
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+            	<% @foodInfos.each do |fi| %>
+					<tr>
+                    	<td>
+                    		<%= fi["foodName"]%>
+                    	</td>
+                    	<td>
+                    		<%= fi["foodprice"]%>
+                    	</td>
+                    	<td>
+                    		<%= fi["number"]%>
+                    	</td>
+                    	<td>
+                    		<%= fi["foodprice"].to_f*fi["number"].to_i%>
+                    	</td>
+                	</tr>
+				<% end %>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="leave_message">
+                        <input type="text" value="给餐厅留言" id="leave_message_box"/>
+                        <div class="leave_message_list clearfix order_shadow" id="leave_message">
+                            <a href="javascript:;"><span>不吃辣</span><b class="leave_message_blank_b">◆</b><b class="leave_message_color_b">◆</b></a>
+                            <a href="javascript:;"><span>辣一点</span></a>
+                            <a href="javascript:;"><span>多加米</span></a>
+                            <a href="javascript:;"><span>么零钱</span></a>
+                            <a href="javascript:;" class="last_child"><span>不要葱姜蒜</span></a>
+                        </div>
+                    </td>
+                    <td colspan="3">
+                        <p class="order_total">
+                            共<em><%= @total_number%></em>份美食&nbsp;&nbsp;&nbsp;&nbsp;应付金额：<em>¥ <%= @total_price%> </em>
+                        </p>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <!--餐厅活动
+        <p class="order_p">
+            <span id="last_must_pay" class="fr">应付金额：<em>¥ 41-0=<em class="realTotalPrice">41</em></em></span>
+            <span class="shelter_span">使用优惠：<a href="javascript:;" class="btn" id="availableCoupon">抵价券<img src="../images/base/selected-icon.png" alt="" /></a><a href="javascript:;" class="btn trade_securities"><em class="voucherPrice"></em>元劵<img src="../images/base/selected-icon.png" alt="" /></a><span class="check_ok" id="trade_success">(抵价<em>0</em>元)</span></span>
+            <span id="border_dashed"></span>
+        </p>
+		-->
+        <!--送餐地址-->
+        <p class="order_p order_p_address">
+            送餐地址：<span class="address_phone"><em>请填写地址</em></span>
+            <a href="javascript:;" class="change_address">[填写]</a>
+        </p>
+        <!--送餐时间-->
+        <div class="order_p order_p_time">
+            送出时间：
+            <div id="time_dropdown" class="ui_dropdown time">
+                <a class="ui_dropdown_toggle"><span id="input_time">立即送出</span><i class="icon_caret"><b></b><b></b></i></a>
+                <ul id="time_list" class="ui_dropdown_menu">
+                    <li>
+                        <span timeID='0'>立即送出</span>
+                    </li>
+                    <li>
+                        <span timeID='1'>22:45:00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <input type="button" id="sendOrder" value="确认下单"/>
+    </div>
+</div>
+<div class="shade" id="shade">
+    &nbsp;
+</div>
+<div class="promotion_code shade_shadow">
+    <h2>使用抵价券</h2>
+    <input type="text" class="input_code" placeholder="请输入验证码"/>
+    <p>
+        <a href="javascript:;" class="orange_btn" id="use_promotion">使用</a>
+        <a href="javascript:;" class="cancel_btn" id="promotion_cancel">取消</a>
+    </p>
+</div>
+<form method="post" action="checkout" id="ctl01">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTIyMTk1Njg5OQ9kFgICAQ9kFgJmD2QWBAIBDxYCHgVzdHlsZQUNZGlzcGxheTpub25lO2QCAw9kFgICAQ8WAh4JaW5uZXJodG1sBYsBPGxpPjxkaXY+5LuK5pel5rKh5pyJ5raI5oGvPC9kaXY+PC9saT48bGkgY2xhc3M9J2J0biBjbGVhcmZpeCBub1BvaW50ZXInPjxpbnB1dCB0eXBlPSdzdWJtaXQnIGNsYXNzPSdzZXRhbGxtZXNzYWdlJyB2YWx1ZT0n55+l6YGT5LqGJz48L2xpPmRk" />
+    </div>
+    <div class="k_c_point shade_shadow">
+        <h2><a href="http://kaichiba.com/about/fPoint">如何获取开吃点</a>该订单最多可以使用<span>0</span>个开吃点</h2>
+        <!--用户限时开吃点大于0才限时-->
+        <p class="pay_t_p">
+            <label>
+                <input type="radio" value="1" name="payType"/>你有<span class="c_orange">0</span>个开吃点，本次使用
+            </label>
+            <select name="UserAvailableKcbPoint" id="UserAvailableKcbPoint" class="t_s Choose" style="margin-bottom: 0;">
+            </select>
+            <span class="check_ok">(抵价0元)</span>
+        </p>
+        <p class="mt_15">
+            <a href="javascript:;" class="orange_btn" id="use_point">使用</a>
+            <a href="javascript:;" class="cancel_btn" id="point_cancel">取消</a>
+        </p>
+    </div>
+</form>
+<div class="select_address shade_shadow" id="select_address">
+    <h2><a href="javascript:;" id="add_new_address">添加新地址</a>送达地址</h2>
+    <p class="mt_20">
+        <a href="javascript:;" class="orange_btn" id="use_address">使用</a>
+        <a href="javascript:;" class="cancel_btn" id="address_cancel">取消</a>
+    </p>
+</div>
+<div id="feedback_btn">
+</div>
+<div id="MsgHide" style="display: none;">
+    <div id="feedbackTip">
+        <label>
+            小提示：催单请进入相应餐厅的页面进行留言，这样餐厅就能看见哦~
+        </label>
+        <textarea id="feedBackTipContent">
+        </textarea>
+    </div>
+    <div id="isVisitor" style="display:none;">
+        <label>
+            您的邮箱(选填)
+        </label>
+        <input type="text" id="visitorMail" />
+    </div>
+    <p id="isUser">
+        我们的回复将发到个人中心的“问题反馈”里，请注意关注，感谢您的建议。
+    </p>
+    <table class="msgVild fBackVali">
+        <tr>
+            <td>
+                验证码：
+            </td>
+            <td>
+                <input type="text" id="fBackValiDateCode" class="ValiDateCode fBackValiDateCode" maxlength="4" style="width: 60px;"/>
+            </td>
+            <td>
+                <div id="ValidateCode">
+                </div>
+            </td>
+            <td>
+                <span id="ValidateCodeClick_fBack" style="line-height: 24px;">更换验证码</span>
+            </td>
+            <td style="width: 102px;">
+                <p class="validRs fBackValiRs">
+                </p>
+            </td>
+        </tr>
+    </table>
+    <div class="___dialogBtn fBackBtn">
+        <input type="button" class="dialogBtn feedBackBt" value="提交" /><input type="button" class="dialogBtn hover fCancelBt" value="取消" />
+    </div>
+</div>
+<div id="footer">
+    <p>
+        <a href="http://kaichiba.com/about/fAbout" rel="nofollow">关于我们</a>|<a href="http://kaichiba.com/about/fRecruit" rel="nofollow">招贤纳士</a>|<a href="http://kaichiba.com/about/fHelp" rel="nofollow">帮助中心</a>|<a href="http://m.kaichiba.com" target="_blank" rel="nofollow">手机HTML5版</a>|<a href="http://wap.kaichiba.com" target="_blank" rel="nofollow">手机WAP版</a>|<a href="http://shop.kaichiba.com" target="_blank" rel="nofollow">餐厅登录</a>|<a href="http://blog.kaichiba.com" target="_blank">美食谭</a>
+        |<a href="http://ls.kaichiba.com" target="_blank">零食吧</a>
+    </p>
+    <hr/>
+    <p>
+        Copyright © 2011-2013 开吃吧 All Rights Reserved 京ICP备12015678号 | 京公网安备110114001132号
+    </p>
+</div>
+<!--end of footer--><input name="Footer1$hid_IspromoteUser" type="hidden" id="hid_IspromoteUser" value="False" />
+<script src="http://kaichiba.com/js/frame/jquery-1.7.1.min.js" type="text/javascript">
+</script>
+<script src="http://kaichiba.com/js/frame/jquery.cookie.js" type="text/javascript">
+</script>
+<script src="http://kaichiba.com/js/frame/jquery.XYTipsWindow.2.8.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+    $().ready(function(){
+        if ($("#hid_IspromoteUser").val() == "True") {
+            $("#pMenu .promote").css("display", "block");
+        }
+        $("#ValidateCode").html("<img src='http://kaichiba.com/Code/ValidateCode.aspx?r=" + Math.random() + "'>");
+        
+        $("#ValidateCode,#ValidateCodeClick_fBack").click(function(){
+            $("#ValidateCode").html("<img src='http://kaichiba.com/Code/ValidateCode.aspx?r=" + Math.random() + "'>");
+            
+        });
+    });
+</script>
+<%= javascript_include_tag "areas/common" %>
+<%= javascript_include_tag "jquery.cookie" %>
+<%= javascript_include_tag "orders/order" %>

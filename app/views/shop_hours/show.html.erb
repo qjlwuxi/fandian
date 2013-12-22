@@ -1,0 +1,18 @@
+<p>
+  <b>Shop:</b>
+  <%=h @shop_hour.shop_id %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%=h @shop_hour.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%=h @shop_hour.end_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_shop_hour_path(@shop_hour) %> |
+<%= link_to 'Back', shop_hours_path %>

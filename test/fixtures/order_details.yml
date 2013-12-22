@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_id: 1
+  food_id: 1
+  name: MyString
+  number: 1
+  price: 1.5
+
+two:
+  order_id: 1
+  food_id: 1
+  name: MyString
+  number: 1
+  price: 1.5

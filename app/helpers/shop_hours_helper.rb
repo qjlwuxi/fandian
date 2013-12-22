@@ -1,0 +1,2 @@
+module ShopHoursHelper
+end

@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @food_type.name %>
+</p>
+
+<p>
+  <b>Enable:</b>
+  <%=h @food_type.enable %>
+</p>
+
+<p>
+  <b>Sort:</b>
+  <%=h @food_type.sort_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_food_type_path(@food_type) %> |
+<%= link_to 'Back', food_types_path %>

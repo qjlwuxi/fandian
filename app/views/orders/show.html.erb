@@ -1,0 +1,48 @@
+<p>
+  <b>Order num:</b>
+  <%=h @order.order_num %>
+</p>
+
+<p>
+  <b>Original price:</b>
+  <%=h @order.original_price %>
+</p>
+
+<p>
+  <b>Current price:</b>
+  <%=h @order.current_price %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @order.phone %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @order.address %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @order.state %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @order.user_id %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%=h @order.area_id %>
+</p>
+
+<p>
+  <b>Shop:</b>
+  <%=h @order.shop_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

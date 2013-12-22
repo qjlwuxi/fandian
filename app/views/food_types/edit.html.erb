@@ -1,0 +1,24 @@
+<h1>Editing food_type</h1>
+
+<% form_for(@food_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :enable %><br />
+    <%= f.check_box :enable %>
+  </p>
+  <p>
+    <%= f.label :sort_id %><br />
+    <%= f.text_field :sort_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @food_type %> |
+<%= link_to 'Back', food_types_path %>

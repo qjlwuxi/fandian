@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_type: MyString
+  number: 1
+  lock_versio: 1
+
+two:
+  order_type: MyString
+  number: 1
+  lock_versio: 1

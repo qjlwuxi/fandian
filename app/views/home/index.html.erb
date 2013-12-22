@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="description" content="无锡的外卖订餐网,我们为您搜罗了周边三公里内的餐厅,为您提供便捷的送餐服务,又能享受优惠的价格" />
+        <meta name="keywords" content="无锡外卖,无锡外卖网,无锡网上订餐,无锡写字楼外卖,无锡高校外卖,无锡高校周边餐厅,无锡写字楼周边餐厅,三公里送餐圈" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="baidu-site-verification" content="3TDvYt5ClyzpoxHQ" />
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <title>饭点网-无锡的外卖订餐网,便捷又便宜</title>
+        <%= stylesheet_link_tag "nav" %>
+        <%= stylesheet_link_tag "common" %>
+        <%= javascript_include_tag "jquery-1.7.1.min.js" %>
+        <%= javascript_include_tag "jquery.cookie.js" %>
+        <%= javascript_include_tag "home/iDeal.visitRecord" %>
+        <%= javascript_include_tag "home/nav" %>
+    </head>
+    <body onload="pageLoad()">
+        <div class="top">
+            <img src="images/newnavi/logo.png" />
+        </div>
+        <div class="Main_body">
+            <div class="titleimg">
+                <img src="images/newnavi/title.png" />
+            </div>
+            <div class="Sub_body">
+                <div class="body_top">
+                    <span>请选择所在区域</span>
+                    <span id="city"></span>
+                    <img src="images/newnavi/dot.png" /><span id="area"></span>
+                    <img src="images/newnavi/dot.png" /><span id="shoparea"></span>
+                    <a class="triangle"></a>
+                </div>
+                <div class="Main_subbody">
+                    <ul class="cities">
+                        <li class="clearfix">
+                            <% @cities.each do |c| %>
+                            <span class=<%= c.class_name %>><%= c.name %></span>
+                            <% end %>
+                        </li>
+                    </ul>
+                    <div class="allareas">
+                        <% @cities.each do |c| %>
+                        <ul class="areas" id=<%= c.class_name %>>
+                            <% c.areas.each do |ar| %>
+                            <li>
+                                <a href="/areas/<%=ar.id%>" target="_blank" title="<%= ar.name%>周边餐厅"><%= ar.name %></a>
+                            </li>
+                            <% end %>
+                        </ul>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="firenf_link">
+                <!-- 友情链接 -->
+            </p>
+            <div class="hr">
+            </div>
+            <p class="last">
+                Copyright © 2011-2013 饭店网All Rights Reserved 苏ICP备00000000号 
+            </p>
+        </div>
+        <input name="findschool" type="hidden" id="findschool" /><input name="findcity" type="hidden" id="findcity" />
+    </body>
+</html>

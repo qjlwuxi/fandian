@@ -1,0 +1,377 @@
+<%= javascript_include_tag "areas/search" %>
+<%= javascript_include_tag "areas/top_js" %>
+<%= javascript_include_tag "jquery.cookie" %>
+<%= javascript_include_tag "areas/set_cookie" %>
+<%= javascript_include_tag "areas/recommendSup.js?v4.1.7" %>
+<%= javascript_tag "
+	var areaID = '#{@area.id}';
+" %>
+<div id="top">
+    <div id="top_inner">
+        <a class="logo" href="/home"><img src="../images/tranlogo.png"></a>
+        <div id="top_quickmenu" class="quick_menu">
+            <dl>
+                <dd>
+                    <a id="top_MyOrderLink" class="MyOrderLink" href="#">我的订单</a>
+                </dd>
+                <dd class="all_mess">
+                    <span id="top_notification" class="notification"><b class="message_prompt">&nbsp;</b><span id="top_num" class="num" style="display:none;">0</span>
+                        <div id="top_MessageContent" class="layer_top_account layer_top_Message br4 shadow " style="display: none">
+                            <span class="arrow"></span>
+                            <ul id="top_MessageBox" class="MessageBox">
+                                <li class='No_Message_Type'>
+                                    <div>
+                                        今日没有消息
+                                    </div>
+                                </li>
+                                <li class='btn clearfix noPointer'>
+                                    <input type='submit' class='setallmessage' value='知道了'>
+                                </li>
+                            </ul>
+                        </div>
+                    </span>
+                </dd>
+                <dd id="top_top_user" class="Newaccount">
+                    <div class="login_regist">
+                        <a href="http://kaichiba.com/member/login" class="log_btn">登录</a>
+                        <span>|</span>
+                        <a href="http://kaichiba.com/member/register" class="log_btn">注册</a>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <div id="search" class="fr br3">
+            <input id="keyword" type="text" onkeydown="enterIn(event)" value="搜索餐厅、美食" autocomplete="off" /><a class="serch_btn_a" href="javascript:searchClick();">搜索</a>
+            <div class="searchRes" id="searchRes">
+            </div>
+        </div>
+        <!--end of quickmenu-->
+    </div>
+</div>
+<div class="shade" id="shade" style="display: none; opacity: 0.8; filter: alpha(opacity=80);">
+    &nbsp;
+</div>
+<div class="urgency_message" noticeid="" style="display: none">
+    <div class="urgency_message_top">
+        <h2 class="urgency_message_top_title">紧急通知</h2>
+        <p class="urgency_message_show">
+            您的电话<span id="UserPhone">15839382938</span>拨打不通，送餐员联系不上您，非常着急，请及时检查，保持电话畅通！！
+        </p>
+    </div>
+    <div class="urgency_message_bottom">
+        <a href="javascript:;" class="return_message">好的，我已经联系送餐员</a>
+    </div>
+</div>
+<!--end of top--><input type="hidden" value="http://kaichiba.com/ajax" id="ajaxUrl" />
+<div id="wrap">
+    <div id="school_index">
+        <a href="/home">[切换位置]</a>
+    </div>
+    <div id="container" class="clearfix">
+        <div id="left">
+            <!--轮换图开始-->
+            <div id="focus">
+                <ul>
+                    <li>
+                        <a target="_blank"><img src="/images/ads/ad1.png" width="700px" height="92px" alt=""></img></a>
+                    </li>
+                    <li>
+                        <a target="_blank"><img src="/images/ads/ad2.png" width="700px" height="92px" alt=""></img></a>
+                    </li>
+                    <li>
+                        <a target="_blank"><img src="/images/ads/ad3.png" width="700px" height="92px" alt=""></img></a>
+                    </li>
+                </ul>
+            </div><!--轮换图结束--><!--在线餐厅开始-->
+            <div id="onlineSup" class="sup_list">
+                <div class="sup_list_title">
+                    <h2>在线订餐</h2>
+                    <p class="si_filter">
+                        <input id="showOnLine" class="fl" type="checkbox" /><span class="fl">仅显示营业中</span>
+                    </p>
+                    <p class="step">
+                        <span>选餐厅</span>
+                        <span>选美食</span>
+                        <span>下订单</span>
+                        <span>餐到付款</span>
+						<span>评价商家</span>
+                    </p>
+                </div>
+                <div class="sup_list_body shadow" id="hallListOnline">
+                    <table cellpadding="0" cellspacing="0" id="SupplierListBody">
+                    	<% @shops.each_with_index do |shop,index| %>
+							<td>
+							<% if check_hour(shop) %>
+								<div class='si_block' id="<%=shop.id%>" sid="<%= index.to_s%>">
+									<div class="si_logo">
+                                    	<a href="/shop/<%=shop.id%>" target="_blank"><img src="<%= shop.logo_path %>" original="<%= shop.logo_path %>" onerror="/images/wutu.jpg" alt="<%= shop.name %>" width="43px" height="43px" /></a>
+                                	</div>
+                                	<div class="si_info">
+                                    	<p class="si_name">
+                                        	<a href="/shop/<%=shop.id%>" id="s_<%=shop.id%>" target="_blank"><%= shop.name%></a>
+                                    	</p>
+                                    	<span class='si_com'><%= shop.send_food_rate%>分钟</span>
+                                	</div>
+								</div>	
+							<% else %>
+								<div class='si_block si_closed' id="<%=shop.id%>" sid="<%= index.to_s%>">
+									<div class="si_logo">
+                                    	<a href="/shop/<%=shop.id%>" target="_blank"><img src="<%= shop.logo_path %>" original="<%= shop.logo_path %>" onerror="/images/wutu.jpg" alt="<%= shop.name %>" width="43px" height="43px" /></a>
+                                	</div>
+									<div class="si_info">
+                                    	<p class="si_name">
+                                        	<a href="/shop/<%=shop.id%>" id="s_<%=shop.id%>" target="_blank"><%= shop.name%></a>
+                                    	</p>
+                                    	<span class='rest'></span>
+                                    	<p class="rest">已打烊</p>
+                                </div>
+								</div>	
+							<% end %>
+							</td>
+						<% end %>
+                    </table>
+                    <!--在线订餐浮层开始-->
+                    <div class="shopTip">
+                        <div class="sup_detail br3 clearfix">
+                            <div class="loading">
+                                <img src="/images/loading.gif" class="loading_img" width="32px" height="32px" alt="正在加载" />
+                                <div class="msg">
+                                    正在加载，请稍等...
+                                </div>
+                            </div>
+                            <div class="detail_info">
+                            </div>
+                        </div>
+                        <span class="arrow"></span>
+                    </div>
+                    <!--end of shopTip-->
+                </div>
+                <!--end of sup_list_body-->
+            </div>
+            <!--在线餐厅结束--><!--电话订餐开始--><!--电话订餐结束-->
+            <div class="nofind">
+                没找到熟悉的餐厅？您可以<span>推荐新餐厅</span>
+                <em>(您推荐的餐厅必须有外卖服务哦～)</em>
+            </div>
+        </div>
+        <!--end of left-->
+        <div id="right">
+            <div class="right_item shadow" id="siteNotice">
+                <h3>网站公告</h3>
+                <div class="ri_body">
+                    <p>
+                    </p>
+                    <p>
+                    </p>
+                    <p>
+                        <b>开吃吧</b>携手<b>肯德基</b>推出网上订餐优惠活动：
+                    </p>
+                    <p>
+                        1、肯德基点餐每单满39元，<b>免收外送费</b>；
+                    </p>
+                    <p>
+                        2、成功在肯德基点餐后，将订单号发给客服QQ（2442258937），即可获赠<b>50个开吃点或2000积分！！！</b>
+                    </p>
+                    <p>
+                        机不可失时不再来哦，快去点餐吧！
+                    </p>
+                    <p>
+                        <a href=""><b>点击进入</b></a>
+                    </p>
+                    <p>
+                    </p>1.开吃吧已经推广到我们南京理工大学了，以后再也不用挤食堂了，订外卖也不愁了； 
+                    <p>
+                    </p>2.没有你想点的餐厅？赶紧告诉我们吧，我们会在第一时间收录。推荐新餐厅请点击网站底部的“推荐新餐厅”哦； 
+                    <p>
+                    </p>3.最近我们要在南京理工大学招募有创业想法的高校执行官，有意者请发送简历到dujinfeng@kaichiba.com.
+                    <p>
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <a href="http://kaichiba.com/m/index.html" target="_blank" id="androidAppDownload" class="mt10" style="display:block;"><img src="http://kaichiba.com/image/appdown.png" width="272" height="63" alt="Adroid APP客户端" /></a>
+            <div class="right_item shadow">
+                <h3>Q&A</h3>
+                <p class="c_blue">
+                    谁负责送餐？
+                </p>
+                <p class="answer">
+                    均由餐厅自己配送，开吃吧不负责送餐。
+                </p>
+                <p class="c_blue">
+                    多久能收到？
+                </p>
+                <p class="answer">
+                    每个餐厅都有以前客户对他们做出的速度评价，可以在首页每个餐厅名字的左下方看到。 
+                </p>
+                <p class="c_blue">
+                    下单后怎样追踪订单状态？
+                </p>
+                <p class="answer">
+                    点击网站右上角的<img src="http://kaichiba.com/image/message-icon.png" alt="" />或用户名，进入<b>“订单中心”</b>。
+                </p>
+                <p class="c_blue">
+                    一直没收到餐饮怎么办？
+                </p>
+                <p class="answer">
+                    先进入<b>“订单中心”</b>，选择对应的订单点击“催单”，我们会帮你催餐并告知你结果。
+                </p>
+                <p class="c_blue">
+                    还有其他问题？
+                </p>
+                <p class="answer">
+                    我们建议你点击网页右方的<b>“问题反馈”</b>提出问题。你也可以在按照下方的<b>“客户服务”</b>里的联系方式，拨打电话寻求客服帮助。
+                </p>
+            </div>
+            <div class="right_item shadow" id="customerService">
+                <h3>客户服务</h3>
+                <div class="ri_body">
+                    <p>
+                        客服电话:400-065-7117
+                    </p>
+                    <p>
+                        客服邮箱：<a href="mailto:service@kaichiba.com">service@kaichiba.com</a>
+                    </p>
+                    <p>
+                        客服服务QQ：2442258937
+                    </p>
+                    <p>
+                        客服QQ(武汉)：1642114356
+                    </p>
+                    <p>
+                        交换链接QQ：2292841598
+                    </p>
+                    <p>
+                        商业合作QQ：703907670
+                    </p>
+                    <p>
+                        技术支持QQ：2391663136
+                    </p>
+                </div>
+            </div>
+            <div class="right_item shadow" id="focusUs">
+                <h3>玩转开吃吧</h3>
+                <div class="ri_body">
+                    <a target="_blank" title="开吃吧新浪微博" href="http://weibo.com/kaichiba"><img src="http://kaichiba.com/image/link_logo1_new.gif" alt="新浪微博" /></a><a target="_blank" title="开吃吧腾讯微博" href="http://t.qq.com/kaichiba"><img src="http://kaichiba.com/image/link_logo2_new.gif" alt="腾讯微博" /></a><a target="_blank" title="开吃吧人人网" href="http://page.renren.com/699150045"><img src="http://kaichiba.com/image/link_logo3_new.gif" alt="人人网" /></a><a target="_blank" title="开吃吧百度i贴吧" href="http://tieba.baidu.com/i/195981689"><img src="http://kaichiba.com/image/link_logo4_new.gif" alt="百度贴吧" /></a>
+                </div>
+            </div>
+        </div><!--end of right--><!--推荐餐厅开始-->
+        <div id="pop1" style="display: none;">
+            <div class="apply_rst">
+                <p class="apply_tip">
+                    此处仅限用户申请开通餐厅,餐厅请到<a href="../about/join">餐厅加盟</a>提交
+                </p>
+                <ul>
+                    <li>
+                        <label>
+                            *餐厅名称：
+                        </label>
+                        <input id="apply_supname" type="text" value="" /><span id="supnametip" class="reply_addtip"></span>
+                    </li>
+                    <li>
+                        <label>
+                            餐厅电话：
+                        </label>
+                        <input id="apply_supphone" type="text" value="" /><span id="supphonetip" class="reply_addtip"></span>
+                    </li>
+                    <li>
+                        <label class="reply_address">
+                            餐厅地址：
+                        </label>
+                        <textarea id="apply_supaddr" class="satNumbers" onkeyup="satTextarea(this,50)">
+                        </textarea>
+                        <span class="reply_addtip">还可以输入<strong>50</strong>个汉字</span>
+                        <span></span>
+                    </li>
+                </ul>
+                <table class="msgVild" style="margin-left: 42px;">
+                    <tr>
+                        <td>
+                            验证码：
+                        </td>
+                        <td>
+                            <input type="text" class="ValiDateCode  recValiDateCode" maxlength="4" style="width: 60px;"/>
+                        </td>
+                        <td>
+                            <div id="ValidateCode2">
+                            </div>
+                        </td>
+                        <td>
+                            <span id="ValidateCodeClick_default" style="line-height: 24px;">更换验证码</span>
+                        </td>
+                        <td style="width: 102px;">
+                            <p class="validRs">
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <div class="___dialogBtn">
+                    <input type="button" class="dialogBtn submitBtn" value="提交" /><input type="button" class="dialogBtn hover cancelBtn" value="取消" />
+                </div>
+            </div>
+        </div><!--推荐餐厅结束-->
+    </div><!--end of container-->
+    <div id="feedback_btn">
+    </div>
+    <div id="MsgHide" style="display: none;">
+        <div id="feedbackTip">
+            <label>
+                小提示：催单请进入相应餐厅的页面进行留言，这样餐厅就能看见哦~
+            </label>
+            <textarea id="feedBackTipContent">
+            </textarea>
+        </div>
+        <div id="isVisitor" style="display:none;">
+            <label>
+                您的邮箱(选填)
+            </label>
+            <input type="text" id="visitorMail" />
+        </div>
+        <p id="isUser">
+            我们的回复将发到个人中心的“问题反馈”里，请注意关注，感谢您的建议。
+        </p>
+        <table class="msgVild fBackVali">
+            <tr>
+                <td>
+                    验证码：
+                </td>
+                <td>
+                    <input type="text" id="fBackValiDateCode" class="ValiDateCode fBackValiDateCode" maxlength="4" style="width: 60px;"/>
+                </td>
+                <td>
+                    <div id="ValidateCode">
+                    </div>
+                </td>
+                <td>
+                    <span id="ValidateCodeClick_fBack" style="line-height: 24px;">更换验证码</span>
+                </td>
+                <td style="width: 102px;">
+                    <p class="validRs fBackValiRs">
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <div class="___dialogBtn fBackBtn">
+            <input type="button" class="dialogBtn feedBackBt" value="提交" /><input type="button" class="dialogBtn hover fCancelBt" value="取消" />
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+            <a href="http://kaichiba.com/about/fAbout" rel="nofollow">关于我们</a>|<a href="http://kaichiba.com/about/fRecruit" rel="nofollow">招贤纳士</a>|<a href="http://kaichiba.com/about/fHelp" rel="nofollow">帮助中心</a>|<a href="http://m.kaichiba.com" target="_blank" rel="nofollow">手机HTML5版</a>|<a href="http://wap.kaichiba.com" target="_blank" rel="nofollow">手机WAP版</a>|<a href="http://shop.kaichiba.com" target="_blank" rel="nofollow">餐厅登录</a>|<a href="http://blog.kaichiba.com" target="_blank">美食谭</a>
+            |<a href="http://ls.kaichiba.com" target="_blank">零食吧</a>
+        </p>
+        <hr/>
+        <p>
+            Copyright © 2011-2013 饭店网All Rights Reserved 苏ICP备00000000号 
+        </p>
+    </div>
+    <!--end of footer--><input name="ctl01$hid_IspromoteUser" type="hidden" id="hid_IspromoteUser" value="False" /><%= javascript_include_tag "jquery.XYTipsWindow.2.8.js" %>
+    <%= javascript_include_tag "areas/common" %>
+</div><!--end of wrap--><input type="hidden" id="needUniCookie" value="" /><!--用户判断进入页面是否需要大学cookie，否则就跳转-->
+<input type="hidden" id="areaNameValue" value=<%= @area.name%> />
+<%= javascript_include_tag "lazyload.js?v4.1.7" %>
+<%= javascript_include_tag "areas/default.js?v4.1.7" %>
+<%= javascript_include_tag "areas/getfoodbyrandom.js?v4.1.7" %>
+<script id="iDealKCBVisitRecord" src="/javascripts/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" type="text/javascript">
+</script>

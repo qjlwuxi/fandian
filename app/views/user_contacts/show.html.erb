@@ -1,0 +1,28 @@
+<p>
+  <b>User:</b>
+  <%=h @user_contact.user_id %>
+</p>
+
+<p>
+  <b>Addr:</b>
+  <%=h @user_contact.addr %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @user_contact.phone %>
+</p>
+
+<p>
+  <b>Altphone:</b>
+  <%=h @user_contact.altphone %>
+</p>
+
+<p>
+  <b>Is default:</b>
+  <%=h @user_contact.is_default %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_contact_path(@user_contact) %> |
+<%= link_to 'Back', user_contacts_path %>
