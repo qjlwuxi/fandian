@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class FoodTypesControllerTest < ActionController::TestCase
+  setup do
+    @food_type = food_types(:one)
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -14,30 +18,30 @@ class FoodTypesControllerTest < ActionController::TestCase
 
   test "should create food_type" do
     assert_difference('FoodType.count') do
-      post :create, :food_type => { }
+      post :create, food_type: { enable: @food_type.enable, name: @food_type.name, shop_id: @food_type.shop_id, sort_id: @food_type.sort_id }
     end
 
     assert_redirected_to food_type_path(assigns(:food_type))
   end
 
   test "should show food_type" do
-    get :show, :id => food_types(:one).to_param
+    get :show, id: @food_type
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => food_types(:one).to_param
+    get :edit, id: @food_type
     assert_response :success
   end
 
   test "should update food_type" do
-    put :update, :id => food_types(:one).to_param, :food_type => { }
+    put :update, id: @food_type, food_type: { enable: @food_type.enable, name: @food_type.name, shop_id: @food_type.shop_id, sort_id: @food_type.sort_id }
     assert_redirected_to food_type_path(assigns(:food_type))
   end
 
   test "should destroy food_type" do
     assert_difference('FoodType.count', -1) do
-      delete :destroy, :id => food_types(:one).to_param
+      delete :destroy, id: @food_type
     end
 
     assert_redirected_to food_types_path

@@ -8,7 +8,7 @@
 " %>
 <div id="top">
     <div id="top_inner">
-        <a class="logo" href="/home"><img src="../images/tranlogo.png"></a>
+        <a class="logo" href="/home"><img src="../assets/tranlogo.png"></a>
         <div id="top_quickmenu" class="quick_menu">
             <dl>
                 <dd>
@@ -73,13 +73,13 @@
             <div id="focus">
                 <ul>
                     <li>
-                        <a target="_blank"><img src="/images/ads/ad1.png" width="700px" height="92px" alt=""></img></a>
+                        <a target="_blank"><img src="/assets/ads/ad1.png" width="700px" height="92px" alt=""></img></a>
                     </li>
                     <li>
-                        <a target="_blank"><img src="/images/ads/ad2.png" width="700px" height="92px" alt=""></img></a>
+                        <a target="_blank"><img src="/assets/ads/ad2.png" width="700px" height="92px" alt=""></img></a>
                     </li>
                     <li>
-                        <a target="_blank"><img src="/images/ads/ad3.png" width="700px" height="92px" alt=""></img></a>
+                        <a target="_blank"><img src="/assets/ads/ad3.png" width="700px" height="92px" alt=""></img></a>
                     </li>
                 </ul>
             </div><!--轮换图结束--><!--在线餐厅开始-->
@@ -104,7 +104,7 @@
 							<% if check_hour(shop) %>
 								<div class='si_block' id="<%=shop.id%>" sid="<%= index.to_s%>">
 									<div class="si_logo">
-                                    	<a href="/shop/<%=shop.id%>" target="_blank"><img src="<%= shop.logo_path %>" original="<%= shop.logo_path %>" onerror="/images/wutu.jpg" alt="<%= shop.name %>" width="43px" height="43px" /></a>
+                                    	<a href="/shop/<%=shop.id%>" target="_blank"><img src="<%= shop.logo_path %>" original="<%= shop.logo_path %>" onerror="/assets/wutu.jpg" alt="<%= shop.name %>" width="43px" height="43px" /></a>
                                 	</div>
                                 	<div class="si_info">
                                     	<p class="si_name">
@@ -116,7 +116,7 @@
 							<% else %>
 								<div class='si_block si_closed' id="<%=shop.id%>" sid="<%= index.to_s%>">
 									<div class="si_logo">
-                                    	<a href="/shop/<%=shop.id%>" target="_blank"><img src="<%= shop.logo_path %>" original="<%= shop.logo_path %>" onerror="/images/wutu.jpg" alt="<%= shop.name %>" width="43px" height="43px" /></a>
+                                    	<a href="/shop/<%=shop.id%>" target="_blank"><img src="<%= shop.logo_path %>" original="<%= shop.logo_path %>" onerror="/assets/wutu.jpg" alt="<%= shop.name %>" width="43px" height="43px" /></a>
                                 	</div>
 									<div class="si_info">
                                     	<p class="si_name">
@@ -134,7 +134,7 @@
                     <div class="shopTip">
                         <div class="sup_detail br3 clearfix">
                             <div class="loading">
-                                <img src="/images/loading.gif" class="loading_img" width="32px" height="32px" alt="正在加载" />
+                                <img src="/assets/loading.gif" class="loading_img" width="32px" height="32px" alt="正在加载" />
                                 <div class="msg">
                                     正在加载，请稍等...
                                 </div>
@@ -373,5 +373,5 @@
 <%= javascript_include_tag "lazyload.js?v4.1.7" %>
 <%= javascript_include_tag "areas/default.js?v4.1.7" %>
 <%= javascript_include_tag "areas/getfoodbyrandom.js?v4.1.7" %>
-<script id="iDealKCBVisitRecord" src="/javascripts/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" type="text/javascript">
+<script id="iDealKCBVisitRecord" src="/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" type="text/javascript">
 </script>

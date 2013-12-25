@@ -4,19 +4,22 @@
   <tr>
     <th>Order</th>
     <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @order_logs.each do |order_log| %>
   <tr>
-    <td><%=h order_log.order_id %></td>
-    <td><%=h order_log.content %></td>
+    <td><%= order_log.order_id %></td>
+    <td><%= order_log.content %></td>
     <td><%= link_to 'Show', order_log %></td>
     <td><%= link_to 'Edit', edit_order_log_path(order_log) %></td>
-    <td><%= link_to 'Destroy', order_log, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', order_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New order_log', new_order_log_path %>
+<%= link_to 'New Order log', new_order_log_path %>

@@ -1,4 +1,6 @@
 class FoodType < ActiveRecord::Base
+  attr_accessible :enable, :name, :shop_id, :sort_id
+  
   belongs_to :shop
   has_many :foods
   

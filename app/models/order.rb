@@ -1,4 +1,6 @@
 class Order < ActiveRecord::Base
+  attr_accessible :order_num, :original_price, :current_price, :phone, :address, :area_id, :shop_id, :altphone, :notes
+  
   belongs_to :user
   belongs_to :area
   belongs_to :shop

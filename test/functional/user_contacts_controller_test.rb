@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class UserContactsControllerTest < ActionController::TestCase
+  setup do
+    @user_contact = user_contacts(:one)
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -14,30 +18,30 @@ class UserContactsControllerTest < ActionController::TestCase
 
   test "should create user_contact" do
     assert_difference('UserContact.count') do
-      post :create, :user_contact => { }
+      post :create, user_contact: { user_id: @user_contact.user_id }
     end
 
     assert_redirected_to user_contact_path(assigns(:user_contact))
   end
 
   test "should show user_contact" do
-    get :show, :id => user_contacts(:one).to_param
+    get :show, id: @user_contact
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => user_contacts(:one).to_param
+    get :edit, id: @user_contact
     assert_response :success
   end
 
   test "should update user_contact" do
-    put :update, :id => user_contacts(:one).to_param, :user_contact => { }
+    put :update, id: @user_contact, user_contact: { user_id: @user_contact.user_id }
     assert_redirected_to user_contact_path(assigns(:user_contact))
   end
 
   test "should destroy user_contact" do
     assert_difference('UserContact.count', -1) do
-      delete :destroy, :id => user_contacts(:one).to_param
+      delete :destroy, id: @user_contact
     end
 
     assert_redirected_to user_contacts_path

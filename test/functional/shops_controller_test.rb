@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class ShopsControllerTest < ActionController::TestCase
+  setup do
+    @shop = shops(:one)
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -14,30 +18,30 @@ class ShopsControllerTest < ActionController::TestCase
 
   test "should create shop" do
     assert_difference('Shop.count') do
-      post :create, :shop => { }
+      post :create, shop: { enable: @shop.enable, logo_path: @shop.logo_path, name: @shop.name, star: @shop.star }
     end
 
     assert_redirected_to shop_path(assigns(:shop))
   end
 
   test "should show shop" do
-    get :show, :id => shops(:one).to_param
+    get :show, id: @shop
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => shops(:one).to_param
+    get :edit, id: @shop
     assert_response :success
   end
 
   test "should update shop" do
-    put :update, :id => shops(:one).to_param, :shop => { }
+    put :update, id: @shop, shop: { enable: @shop.enable, logo_path: @shop.logo_path, name: @shop.name, star: @shop.star }
     assert_redirected_to shop_path(assigns(:shop))
   end
 
   test "should destroy shop" do
     assert_difference('Shop.count', -1) do
-      delete :destroy, :id => shops(:one).to_param
+      delete :destroy, id: @shop
     end
 
     assert_redirected_to shops_path

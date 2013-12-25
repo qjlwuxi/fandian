@@ -1,86 +1,86 @@
 class UserContactsController < ApplicationController
   # GET /user_contacts
-  # GET /user_contacts.xml
+  # GET /user_contacts.json
   def index
     @user_contacts = UserContact.all
-    
+
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @user_contacts }
+      format.json { render json: @user_contacts }
     end
   end
-  
+
   # GET /user_contacts/1
-  # GET /user_contacts/1.xml
+  # GET /user_contacts/1.json
   def show
     @user_contact = UserContact.find(params[:id])
-    
+
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @user_contact }
+      format.json { render json: @user_contact }
     end
   end
-  
+
   # GET /user_contacts/new
-  # GET /user_contacts/new.xml
+  # GET /user_contacts/new.json
   def new
     @user_contact = UserContact.new
-    
+
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @user_contact }
+      format.json { render json: @user_contact }
     end
   end
-  
+
   # GET /user_contacts/1/edit
   def edit
     @user_contact = UserContact.find(params[:id])
   end
-  
+
   # POST /user_contacts
-  # POST /user_contacts.xml
+  # POST /user_contacts.json
   def create
     @user_contact = UserContact.new(params[:user_contact])
-    
+
     respond_to do |format|
       if @user_contact.save
-        format.html { redirect_to(@user_contact, :notice => 'UserContact was successfully created.') }
-        format.xml  { render :xml => @user_contact, :status => :created, :location => @user_contact }
+        format.html { redirect_to @user_contact, notice: 'User contact was successfully created.' }
+        format.json { render json: @user_contact, status: :created, location: @user_contact }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @user_contact.errors, :status => :unprocessable_entity }
+        format.html { render action: "new" }
+        format.json { render json: @user_contact.errors, status: :unprocessable_entity }
       end
     end
   end
-  
+
   # PUT /user_contacts/1
-  # PUT /user_contacts/1.xml
+  # PUT /user_contacts/1.json
   def update
     @user_contact = UserContact.find(params[:id])
-    
+
     respond_to do |format|
       if @user_contact.update_attributes(params[:user_contact])
-        format.html { redirect_to(@user_contact, :notice => 'UserContact was successfully updated.') }
-        format.xml  { head :ok }
+        format.html { redirect_to @user_contact, notice: 'User contact was successfully updated.' }
+        format.json { head :no_content }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @user_contact.errors, :status => :unprocessable_entity }
+        format.html { render action: "edit" }
+        format.json { render json: @user_contact.errors, status: :unprocessable_entity }
       end
     end
   end
-  
+
   # DELETE /user_contacts/1
-  # DELETE /user_contacts/1.xml
+  # DELETE /user_contacts/1.json
   def destroy
     @user_contact = UserContact.find(params[:id])
     @user_contact.destroy
-    
+
     respond_to do |format|
-      format.html { redirect_to(user_contacts_url) }
-      format.xml  { head :ok }
+      format.html { redirect_to user_contacts_url }
+      format.json { head :no_content }
     end
   end
-  
+
   #检查地址和电话是否已被注册，如果是，返回空值，否则注册并返回一个随机数作为用户ID
   def CheckContactInfo
     #    user_contact = UserContact.find(:last,:conditions => ["addr = :addr and phone = :phone",{:addr => params[:addr], :phone => params[:phone]}])

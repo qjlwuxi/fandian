@@ -1,32 +1,6 @@
 <h1>Editing order_detail</h1>
 
-<% form_for(@order_detail) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :order_id %><br />
-    <%= f.text_field :order_id %>
-  </p>
-  <p>
-    <%= f.label :food_id %><br />
-    <%= f.text_field :food_id %>
-  </p>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :number %><br />
-    <%= f.text_field :number %>
-  </p>
-  <p>
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Show', @order_detail %> |
 <%= link_to 'Back', order_details_path %>

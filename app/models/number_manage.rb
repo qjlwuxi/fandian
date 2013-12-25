@@ -1,4 +1,6 @@
 class NumberManage < ActiveRecord::Base
+  attr_accessible :order_type, :number
+  
   #生成订单的单号
   def self.get_order_number
     number_manage = NumberManage.first(:conditions => ["order_type = 'Order'"])

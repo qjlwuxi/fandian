@@ -1,20 +1,6 @@
 <h1>Editing order_log</h1>
 
-<% form_for(@order_log) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :order_id %><br />
-    <%= f.text_field :order_id %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Show', @order_log %> |
 <%= link_to 'Back', order_logs_path %>

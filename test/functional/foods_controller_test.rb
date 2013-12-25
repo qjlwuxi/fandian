@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class FoodsControllerTest < ActionController::TestCase
+  setup do
+    @food = foods(:one)
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -14,30 +18,30 @@ class FoodsControllerTest < ActionController::TestCase
 
   test "should create food" do
     assert_difference('Food.count') do
-      post :create, :food => { }
+      post :create, food: { food_type_id: @food.food_type_id }
     end
 
     assert_redirected_to food_path(assigns(:food))
   end
 
   test "should show food" do
-    get :show, :id => foods(:one).to_param
+    get :show, id: @food
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => foods(:one).to_param
+    get :edit, id: @food
     assert_response :success
   end
 
   test "should update food" do
-    put :update, :id => foods(:one).to_param, :food => { }
+    put :update, id: @food, food: { food_type_id: @food.food_type_id }
     assert_redirected_to food_path(assigns(:food))
   end
 
   test "should destroy food" do
     assert_difference('Food.count', -1) do
-      delete :destroy, :id => foods(:one).to_param
+      delete :destroy, id: @food
     end
 
     assert_redirected_to foods_path

@@ -1,0 +1,25 @@
+<%= form_for(@primary_business) do |f| %>
+  <% if @primary_business.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@primary_business.errors.count, "error") %> prohibited this primary_business from being saved:</h2>
+
+      <ul>
+      <% @primary_business.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :enable %><br />
+    <%= f.check_box :enable %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<h1>Listing number_manages</h1>
+
+<table>
+  <tr>
+    <th>Order type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @number_manages.each do |number_manage| %>
+  <tr>
+    <td><%= number_manage.order_type %></td>
+    <td><%= link_to 'Show', number_manage %></td>
+    <td><%= link_to 'Edit', edit_number_manage_path(number_manage) %></td>
+    <td><%= link_to 'Destroy', number_manage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Number manage', new_number_manage_path %>

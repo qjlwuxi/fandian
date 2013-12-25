@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class OrderLogsControllerTest < ActionController::TestCase
+  setup do
+    @order_log = order_logs(:one)
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -14,30 +18,30 @@ class OrderLogsControllerTest < ActionController::TestCase
 
   test "should create order_log" do
     assert_difference('OrderLog.count') do
-      post :create, :order_log => { }
+      post :create, order_log: { content: @order_log.content, order_id: @order_log.order_id }
     end
 
     assert_redirected_to order_log_path(assigns(:order_log))
   end
 
   test "should show order_log" do
-    get :show, :id => order_logs(:one).to_param
+    get :show, id: @order_log
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => order_logs(:one).to_param
+    get :edit, id: @order_log
     assert_response :success
   end
 
   test "should update order_log" do
-    put :update, :id => order_logs(:one).to_param, :order_log => { }
+    put :update, id: @order_log, order_log: { content: @order_log.content, order_id: @order_log.order_id }
     assert_redirected_to order_log_path(assigns(:order_log))
   end
 
   test "should destroy order_log" do
     assert_difference('OrderLog.count', -1) do
-      delete :destroy, :id => order_logs(:one).to_param
+      delete :destroy, id: @order_log
     end
 
     assert_redirected_to order_logs_path

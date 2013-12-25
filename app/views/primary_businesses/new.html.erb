@@ -1,19 +1,5 @@
 <h1>New primary_business</h1>
 
-<% form_for(@primary_business) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :enbale %><br />
-    <%= f.check_box :enbale %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Back', primary_businesses_path %>

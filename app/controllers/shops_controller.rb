@@ -1,23 +1,24 @@
+# encoding: utf-8
 class ShopsController < ApplicationController
   # GET /shops
-  # GET /shops.xml
+  # GET /shops.json
   def index
     @shops = Shop.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @shops }
+      format.json { render json: @shops }
     end
   end
 
   # GET /shops/1
-  # GET /shops/1.xml
+  # GET /shops/1.json
   def show
     @shop = Shop.find(params[:id])
     if @shop
       @food_types = @shop.enable_food_types
     end
-    
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @shop }
@@ -25,13 +26,13 @@ class ShopsController < ApplicationController
   end
 
   # GET /shops/new
-  # GET /shops/new.xml
+  # GET /shops/new.json
   def new
     @shop = Shop.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @shop }
+      format.json { render json: @shop }
     end
   end
 
@@ -41,49 +42,49 @@ class ShopsController < ApplicationController
   end
 
   # POST /shops
-  # POST /shops.xml
+  # POST /shops.json
   def create
     @shop = Shop.new(params[:shop])
 
     respond_to do |format|
       if @shop.save
-        format.html { redirect_to(@shop, :notice => 'Shop was successfully created.') }
-        format.xml  { render :xml => @shop, :status => :created, :location => @shop }
+        format.html { redirect_to @shop, notice: 'Shop was successfully created.' }
+        format.json { render json: @shop, status: :created, location: @shop }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @shop.errors, :status => :unprocessable_entity }
+        format.html { render action: "new" }
+        format.json { render json: @shop.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # PUT /shops/1
-  # PUT /shops/1.xml
+  # PUT /shops/1.json
   def update
     @shop = Shop.find(params[:id])
 
     respond_to do |format|
       if @shop.update_attributes(params[:shop])
-        format.html { redirect_to(@shop, :notice => 'Shop was successfully updated.') }
-        format.xml  { head :ok }
+        format.html { redirect_to @shop, notice: 'Shop was successfully updated.' }
+        format.json { head :no_content }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @shop.errors, :status => :unprocessable_entity }
+        format.html { render action: "edit" }
+        format.json { render json: @shop.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # DELETE /shops/1
-  # DELETE /shops/1.xml
+  # DELETE /shops/1.json
   def destroy
     @shop = Shop.find(params[:id])
     @shop.destroy
 
     respond_to do |format|
-      format.html { redirect_to(shops_url) }
-      format.xml  { head :ok }
+      format.html { redirect_to shops_url }
+      format.json { head :no_content }
     end
   end
-  
+
   def get_detail
     @shop = Shop.find(params[:shopID])
     detail = {}
@@ -99,7 +100,7 @@ class ShopsController < ApplicationController
     detail['SupplierRemark'] = @shop.supplier_remark
     detail['SendFoodPrice'] = @shop.send_food_price.to_s + "元" if @shop.send_food_price
     detail['Location'] = @shop.location
-    detail['SupplierBusinessTime'] = @shop.shop_hours.collect{|s| s.start_time + '至' + s.end_time}.join(',')
+    detail['SupplierBusinessTime'] = @shop.shop_hours.collect{|s| s.start_time + "至" + s.end_time}.join(',')
     detail['SendFoodRate'] = @shop.send_food_rate
     render :json => detail.to_json
   end

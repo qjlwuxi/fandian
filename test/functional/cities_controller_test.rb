@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class CitiesControllerTest < ActionController::TestCase
+  setup do
+    @city = cities(:one)
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -14,30 +18,30 @@ class CitiesControllerTest < ActionController::TestCase
 
   test "should create city" do
     assert_difference('City.count') do
-      post :create, :city => { }
+      post :create, city: { class_name: @city.class_name, enable: @city.enable, name: @city.name }
     end
 
     assert_redirected_to city_path(assigns(:city))
   end
 
   test "should show city" do
-    get :show, :id => cities(:one).to_param
+    get :show, id: @city
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => cities(:one).to_param
+    get :edit, id: @city
     assert_response :success
   end
 
   test "should update city" do
-    put :update, :id => cities(:one).to_param, :city => { }
+    put :update, id: @city, city: { class_name: @city.class_name, enable: @city.enable, name: @city.name }
     assert_redirected_to city_path(assigns(:city))
   end
 
   test "should destroy city" do
     assert_difference('City.count', -1) do
-      delete :destroy, :id => cities(:one).to_param
+      delete :destroy, id: @city
     end
 
     assert_redirected_to cities_path

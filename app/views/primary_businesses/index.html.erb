@@ -3,20 +3,23 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Enbale</th>
+    <th>Enable</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @primary_businesses.each do |primary_business| %>
   <tr>
-    <td><%=h primary_business.name %></td>
-    <td><%=h primary_business.enbale %></td>
+    <td><%= primary_business.name %></td>
+    <td><%= primary_business.enable %></td>
     <td><%= link_to 'Show', primary_business %></td>
     <td><%= link_to 'Edit', edit_primary_business_path(primary_business) %></td>
-    <td><%= link_to 'Destroy', primary_business, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', primary_business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New primary_business', new_primary_business_path %>
+<%= link_to 'New Primary business', new_primary_business_path %>

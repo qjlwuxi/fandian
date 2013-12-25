@@ -1,9 +1,13 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  area_id: 1
   name: MyString
+  star: 1.5
+  logo_path: MyString
+  enable: false
 
 two:
-  area_id: 1
   name: MyString
+  star: 1.5
+  logo_path: MyString
+  enable: false

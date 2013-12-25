@@ -1,4 +1,6 @@
 class Shop < ActiveRecord::Base
+  attr_accessible :enable, :logo_path, :name, :star, :order_commond_num, :supplier_remark, :send_food_price, :location, :send_food_rate
+  
   has_and_belongs_to_many :areas
   has_many :shop_hours
   has_and_belongs_to_many :primary_businesses

@@ -16,7 +16,7 @@
     </div>
     <div id="top">
         <div id="top_inner">
-            <a class="logo" href="/home"><img src="../images/tranlogo.png"></a>
+            <a class="logo" href="/home"><img src="../assets/tranlogo.png"></a>
             <div id="top_quickmenu" class="quick_menu">
                 <dl>
                     <dd>
@@ -123,7 +123,7 @@
                         </p>
                         <p>
                             <b>送餐说明：</b>
-                            <%= truncate(@shop.supplier_remark,45) %><a href='javascript:void(0);' class='blue' id='supIntrodetail'>详情&gt;</a>
+                            <%= truncate(@shop.supplier_remark, :length => 45) %><a href='javascript:void(0);' class='blue' id='supIntrodetail'>详情&gt;</a>
                         </p>
                         <div id="supIntroDetail">
                             <b>送餐说明：</b>
@@ -189,13 +189,13 @@
 											<li class="foodTitle">
 												<%= food.name%><span>(<%= food.food_unit%>)</span>
 												<% if food.is_new %>
-													<img src="/images/foodType_new.png" alt="新品菜" title="新菜品" />
+													<img src="/assets/foodType_new.png" alt="新品菜" title="新菜品" />
 												<% end %>
 												<% if food.is_sign %>
-													<img src="/images/foodType_sign.png" alt="招牌菜" title="招牌菜" />
+													<img src="/assets/foodType_sign.png" alt="招牌菜" title="招牌菜" />
 												<% end %>
 												<% if food.is_hot %>
-													<img src="/images/foodType_hot.png" alt="辣" title="辣" />
+													<img src="/assets/foodType_hot.png" alt="辣" title="辣" />
 												<% end %>
 												<% if food.original_price and food.original_price > food.price %>
 													<span class='web_s'>特价</span>   
@@ -439,5 +439,5 @@
         </div>
         <!--end of footer--><input name="ctl00$Footer1$hid_IspromoteUser" type="hidden" id="hid_IspromoteUser" value="False" />
     </div><!--end of wrap-->
-    <script id="iDealKCBVisitRecord" src="/javascripts/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" type="text/javascript">
+    <script id="iDealKCBVisitRecord" src="/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" type="text/javascript">
 </form>

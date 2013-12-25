@@ -1,20 +1,6 @@
 <h1>Editing area</h1>
 
-<% form_for(@area) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :enable %><br />
-    <%= f.check_box :enable %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Show', @area %> |
 <%= link_to 'Back', areas_path %>

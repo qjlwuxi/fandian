@@ -1,60 +1,6 @@
 <h1>Editing food</h1>
 
-<% form_for(@food) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :food_type_id %><br />
-    <%= f.text_field :food_type_id %>
-  </p>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :enable %><br />
-    <%= f.check_box :enable %>
-  </p>
-  <p>
-    <%= f.label :sort_id %><br />
-    <%= f.text_field :sort_id %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </p>
-  <p>
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </p>
-  <p>
-    <%= f.label :food_state %><br />
-    <%= f.text_field :food_state %>
-  </p>
-  <p>
-    <%= f.label :food_unit %><br />
-    <%= f.text_field :food_unit %>
-  </p>
-  <p>
-    <%= f.label :activity_state %><br />
-    <%= f.text_field :activity_state %>
-  </p>
-  <p>
-    <%= f.label :is_new %><br />
-    <%= f.check_box :is_new %>
-  </p>
-  <p>
-    <%= f.label :is_sign %><br />
-    <%= f.check_box :is_sign %>
-  </p>
-  <p>
-    <%= f.label :is_hot %><br />
-    <%= f.check_box :is_hot %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Show', @food %> |
 <%= link_to 'Back', foods_path %>

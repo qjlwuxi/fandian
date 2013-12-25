@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class AreasControllerTest < ActionController::TestCase
+  setup do
+    @area = areas(:one)
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -14,30 +18,30 @@ class AreasControllerTest < ActionController::TestCase
 
   test "should create area" do
     assert_difference('Area.count') do
-      post :create, :area => { }
+      post :create, area: { city_id: @area.city_id, enable: @area.enable, name: @area.name }
     end
 
     assert_redirected_to area_path(assigns(:area))
   end
 
   test "should show area" do
-    get :show, :id => areas(:one).to_param
+    get :show, id: @area
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => areas(:one).to_param
+    get :edit, id: @area
     assert_response :success
   end
 
   test "should update area" do
-    put :update, :id => areas(:one).to_param, :area => { }
+    put :update, id: @area, area: { city_id: @area.city_id, enable: @area.enable, name: @area.name }
     assert_redirected_to area_path(assigns(:area))
   end
 
   test "should destroy area" do
     assert_difference('Area.count', -1) do
-      delete :destroy, :id => areas(:one).to_param
+      delete :destroy, id: @area
     end
 
     assert_redirected_to areas_path

@@ -1,0 +1,21 @@
+<%= form_for(@number_manage) do |f| %>
+  <% if @number_manage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@number_manage.errors.count, "error") %> prohibited this number_manage from being saved:</h2>
+
+      <ul>
+      <% @number_manage.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :order_type %><br />
+    <%= f.text_field :order_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

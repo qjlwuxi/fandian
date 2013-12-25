@@ -1,24 +1,6 @@
 <h1>Editing shop_hour</h1>
 
-<% form_for(@shop_hour) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :shop_id %><br />
-    <%= f.text_field :shop_id %>
-  </p>
-  <p>
-    <%= f.label :start_time %><br />
-    <%= f.text_field :start_time %>
-  </p>
-  <p>
-    <%= f.label :end_time %><br />
-    <%= f.text_field :end_time %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Show', @shop_hour %> |
 <%= link_to 'Back', shop_hours_path %>

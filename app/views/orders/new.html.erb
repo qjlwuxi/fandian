@@ -1,47 +1,5 @@
 <h1>New order</h1>
 
-<% form_for(@order) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :order_num %><br />
-    <%= f.text_field :order_num %>
-  </p>
-  <p>
-    <%= f.label :original_price %><br />
-    <%= f.text_field :original_price %>
-  </p>
-  <p>
-    <%= f.label :current_price %><br />
-    <%= f.text_field :current_price %>
-  </p>
-  <p>
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </p>
-  <p>
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </p>
-  <p>
-    <%= f.label :area_id %><br />
-    <%= f.text_field :area_id %>
-  </p>
-  <p>
-    <%= f.label :shop_id %><br />
-    <%= f.text_field :shop_id %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Back', orders_path %>
