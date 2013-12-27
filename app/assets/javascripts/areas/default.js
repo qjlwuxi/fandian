@@ -299,7 +299,7 @@ $(document).ready(function(){
                 path: "/",
                 expires: -1
             });
-            window.location = "/area/" + areaID;
+            window.location = "/areas/" + areaID;
         }
     });
     $(".si_name a,.si_logo a").click(function(e){

@@ -1,7 +1,7 @@
 function pageLoad(){
     if (isRedirect()) {
         var a = $.cookie("uniID");
-        location.href = "/area/" + a
+        location.href = "/areas/" + a
     }
 }
 
@@ -187,13 +187,13 @@ function FindPosition(){
             var d = $("#findschool").val().split(",");
             a = d[0];
             f = d[1];
-            c = " <a href='/area/" + f + "' id='position'>" + a + "</a>"
+            c = " <a href='/areas/" + f + "' id='position'>" + a + "</a>"
         }
         else {
             var d = $("#findcity").val().split(",");
             a = d[0];
             f = d[1];
-            c = " <a class='/area/" + f + "' id='position'>" + a + "</a>";
+            c = " <a class='/areas/" + f + "' id='position'>" + a + "</a>";
             $("#position").live("click", function(){
                 $(".Guess,.Guess_detail,.Guess_Info").remove();
                 $("." + f).click()

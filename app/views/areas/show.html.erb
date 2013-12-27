@@ -104,11 +104,11 @@
 							<% if check_hour(shop) %>
 								<div class='si_block' id="<%=shop.id%>" sid="<%= index.to_s%>">
 									<div class="si_logo">
-                                    	<a href="/shop/<%=shop.id%>" target="_blank"><img src="<%= shop.logo_path %>" original="<%= shop.logo_path %>" onerror="/assets/wutu.jpg" alt="<%= shop.name %>" width="43px" height="43px" /></a>
+                                    	<a href="/shops/<%=shop.id%>" target="_blank"><img src="<%= shop.logo_path %>" original="<%= shop.logo_path %>" onerror="/assets/wutu.jpg" alt="<%= shop.name %>" width="43px" height="43px" /></a>
                                 	</div>
                                 	<div class="si_info">
                                     	<p class="si_name">
-                                        	<a href="/shop/<%=shop.id%>" id="s_<%=shop.id%>" target="_blank"><%= shop.name%></a>
+                                        	<a href="/shops/<%=shop.id%>" id="s_<%=shop.id%>" target="_blank"><%= shop.name%></a>
                                     	</p>
                                     	<span class='si_com'><%= shop.send_food_rate%>分钟</span>
                                 	</div>
@@ -116,11 +116,11 @@
 							<% else %>
 								<div class='si_block si_closed' id="<%=shop.id%>" sid="<%= index.to_s%>">
 									<div class="si_logo">
-                                    	<a href="/shop/<%=shop.id%>" target="_blank"><img src="<%= shop.logo_path %>" original="<%= shop.logo_path %>" onerror="/assets/wutu.jpg" alt="<%= shop.name %>" width="43px" height="43px" /></a>
+                                    	<a href="/shops/<%=shop.id%>" target="_blank"><img src="<%= shop.logo_path %>" original="<%= shop.logo_path %>" onerror="/assets/wutu.jpg" alt="<%= shop.name %>" width="43px" height="43px" /></a>
                                 	</div>
 									<div class="si_info">
                                     	<p class="si_name">
-                                        	<a href="/shop/<%=shop.id%>" id="s_<%=shop.id%>" target="_blank"><%= shop.name%></a>
+                                        	<a href="/shops/<%=shop.id%>" id="s_<%=shop.id%>" target="_blank"><%= shop.name%></a>
                                     	</p>
                                     	<span class='rest'></span>
                                     	<p class="rest">已打烊</p>

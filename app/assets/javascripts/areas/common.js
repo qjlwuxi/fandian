@@ -495,17 +495,17 @@ $(document).ready(function() {
             return
         } else {
             $("#school_index").prepend(b);
-            $("#school a").eq(0).attr("href", "/area/" + c).html(b);
+            $("#school a").eq(0).attr("href", "/areas/" + c).html(b);
             $("#school a").eq(1).attr("href", "/home")
         }
     } else {
         if (d.IsEmpty(c) || d.IsEmpty(b)) {
             $("#school_index").prepend("请选择您的位置");
-            $("#school a").eq(0).attr("href", "/area/" + c).html("请选择您的位置");
+            $("#school a").eq(0).attr("href", "/areas/" + c).html("请选择您的位置");
             $("#school a").eq(1).attr("href", "/home")
         } else {
             $("#school_index").prepend(b);
-            $("#school a").eq(0).attr("href", "/area/" + c).html(b);
+            $("#school a").eq(0).attr("href", "/areas/" + c).html(b);
             $("#school a").eq(1).attr("href", "/home")
         }
     }

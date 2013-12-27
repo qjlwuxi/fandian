@@ -566,7 +566,7 @@ $(document).ready(function(){
                 break;
             case "-15":
                 ShowMessage("该餐厅不是推荐餐厅，请重新下单！");
-                window.location = "/area/" + areaID;
+                window.location = "/areas/" + areaID;
                 flag = "1";
                 break;
             default:

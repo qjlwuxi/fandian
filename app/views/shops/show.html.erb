@@ -102,7 +102,7 @@
                 </div>
                 <div class="attention br8 warn">
                     <p>
-                        当前餐厅并不提供您当前所在位置的外卖服务<a class="tip-button" href="#" onclick="javascript:location.href='../area/'+$.cookie('uniID');return false;">重新选择餐厅</a>
+                        当前餐厅并不提供您当前所在位置的外卖服务<a class="tip-button" href="#" onclick="javascript:location.href='../areas/'+$.cookie('uniID');return false;">重新选择餐厅</a>
                     </p>
                 </div>
             </div>
@@ -155,9 +155,9 @@
             <div class="clearfix">
                 <div id="left" class="shadow s_menu">
                     <div id="s_tab">
-                        <a href="/shop/<%= @shop.id%>" class="active">看菜单</a>
-                        <a href="/shop/comment/<%= @shop.id%>">累积评价</a>
-                        <a href="/shop/message/<%= @shop.id%>">给餐厅留言</a>
+                        <a href="/shops/<%= @shop.id%>" class="active">看菜单</a>
+                        <a href="/shops/comment/<%= @shop.id%>">累积评价</a>
+                        <a href="/shops/message/<%= @shop.id%>">给餐厅留言</a>
                     </div>
                     <div id="menuCategory" class="mt10">
                         <ul id="FoodTypeList" style="bottom:30px;" class="clearfix">

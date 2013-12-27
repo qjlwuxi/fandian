@@ -437,7 +437,7 @@ $(document).ready(function(){
             window.location.href = "/home";
             return;
         }
-        window.location = "/area/" + $.cookie("areaID");
+        window.location = "/areas/" + $.cookie("areaID");
     });
     $("#detail").click(function(){
         $(this).hide();

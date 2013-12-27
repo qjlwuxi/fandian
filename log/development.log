@@ -15105,3 +15105,3540 @@ Served asset /ads/ad1.png - 304 Not Modified (0ms)
 
 Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-26 00:06:15 +0800
 Served asset /ads/ad1.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:27:44 +0800
+Served asset /ads/ad1.png - 304 Not Modified (15ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 22:27:49 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+Compiled nav.css  (0ms)  (pid 5360)
+Compiled common.css  (31ms)  (pid 5360)
+Compiled jquery-1.7.1.min.js  (0ms)  (pid 5360)
+Compiled jquery.cookie.js  (0ms)  (pid 5360)
+Compiled home/iDeal.visitRecord.js  (0ms)  (pid 5360)
+Compiled home/nav.js  (0ms)  (pid 5360)
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 2[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 3
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 4[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 5
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 6[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 7
+  Rendered home/index.html.erb (484.4ms)
+Completed 200 OK in 781ms (Views: 484.4ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nav.css?body=1" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /nav.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/nav.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /home/nav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newnavi/logo.png" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /newnavi/logo.png - 304 Not Modified (46ms)
+
+
+Started GET "/assets/newnavi/title.png" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /newnavi/title.png - 304 Not Modified (62ms)
+
+
+Started GET "/assets/newnavi/bg.png" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /newnavi/bg.png - 304 Not Modified (156ms)
+
+
+Started GET "/assets/newnavi/dot.png" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /newnavi/dot.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/newnavi/choose.png" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /newnavi/choose.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-27 22:27:50 +0800
+Served asset /favicon.ico - 304 Not Modified (31ms)
+
+
+Started GET "/assets/newnavi/back.png" for 127.0.0.1 at 2013-12-27 22:27:51 +0800
+Served asset /newnavi/back.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/newnavi/background.png" for 127.0.0.1 at 2013-12-27 22:27:51 +0800
+Served asset /newnavi/background.png - 304 Not Modified (125ms)
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:27:52 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+Compiled areas/search.js  (0ms)  (pid 5360)
+Compiled areas/top_js.js  (0ms)  (pid 5360)
+Compiled areas/set_cookie.js  (0ms)  (pid 5360)
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3[0m
+Compiled jquery.XYTipsWindow.2.8.js  (15ms)  (pid 5360)
+Compiled areas/common.js  (0ms)  (pid 5360)
+  Rendered areas/show.html.erb within layouts/areas (625.0ms)
+Completed 200 OK in 828ms (Views: 828.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Compiled base.css  (0ms)  (pid 5360)
+Served asset /base.css - 304 Not Modified (46ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Compiled main.css  (0ms)  (pid 5360)
+Served asset /main.css - 304 Not Modified (78ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Compiled recommendSup.css  (0ms)  (pid 5360)
+Served asset /recommendSup.css - 304 Not Modified (46ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Served asset /areas/search.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Compiled areas/recommendSup.js  (0ms)  (pid 5360)
+Served asset /areas/recommendSup.js - 304 Not Modified (62ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Served asset /areas/common.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:27:53 +0800
+Compiled lazyload.js  (0ms)  (pid 5360)
+Served asset /lazyload.js - 304 Not Modified (93ms)
+
+
+Started GET "/assets/areas/default.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Compiled areas/default.js  (0ms)  (pid 5360)
+Served asset /areas/default.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Compiled areas/getfoodbyrandom.js  (0ms)  (pid 5360)
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newTopbg.png" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /newTopbg.png - 304 Not Modified (93ms)
+
+
+Started GET "/assets/notification.png" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /notification.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /tranlogo.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /ads/ad2.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /ads/ad3.png - 304 Not Modified (31ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/notiNum2.png" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /notiNum2.png - 304 Not Modified (62ms)
+
+
+Started GET "/assets/base/fdnew.png" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /base/fdnew.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/base/pos.png" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /base/pos.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/base/lap.gif" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /base/lap.gif - 304 Not Modified (31ms)
+
+
+Started GET "/assets/base/step-point-on.gif" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /base/step-point-on.gif - 304 Not Modified (15ms)
+
+
+Started GET "/assets/base/closed-bg.png" for 127.0.0.1 at 2013-12-27 22:27:54 +0800
+Served asset /base/closed-bg.png - 304 Not Modified (62ms)
+
+
+Started GET "/images/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:27:55 +0800
+
+ActionController::RoutingError (No route matches [GET] "/images/shops/1_logo.jpeg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/main.png" for 127.0.0.1 at 2013-12-27 22:27:55 +0800
+Served asset /main.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/rec.png" for 127.0.0.1 at 2013-12-27 22:27:55 +0800
+Served asset /rec.png - 304 Not Modified (62ms)
+
+
+Started GET "/assets/base/top_layer_arrow.png" for 127.0.0.1 at 2013-12-27 22:27:55 +0800
+Served asset /base/top_layer_arrow.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/base/myAccountButton.png" for 127.0.0.1 at 2013-12-27 22:27:55 +0800
+Served asset /base/myAccountButton.png - 304 Not Modified (46ms)
+
+
+Started GET "/images/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:27:55 +0800
+
+ActionController::RoutingError (No route matches [GET] "/images/shops/2_logo.jpeg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/images/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:27:55 +0800
+
+ActionController::RoutingError (No route matches [GET] "/images/shops/3_logo.jpeg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:27:55 +0800
+Served asset /loading.gif - 304 Not Modified (15ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:28:06 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:28:15 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:28:24 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:28:33 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/shops/get_detail?shopID=1&_=1388154521656" for 127.0.0.1 at 2013-12-27 22:28:41 +0800
+Processing by ShopsController#get_detail as JSON
+  Parameters: {"shopID"=>"1", "_"=>"1388154521656"}
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mPrimaryBusiness Load (0.0ms)[0m  SELECT `primary_businesses`.* FROM `primary_businesses` INNER JOIN `primary_businesses_shops` ON `primary_businesses`.`id` = `primary_businesses_shops`.`primary_business_id` WHERE `primary_businesses_shops`.`shop_id` = 1
+Completed 200 OK in 47ms (Views: 0.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/base/arrow-shopTip.png" for 127.0.0.1 at 2013-12-27 22:28:41 +0800
+Served asset /base/arrow-shopTip.png - 304 Not Modified (46ms)
+
+
+Started GET "/images/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:28:41 +0800
+
+ActionController::RoutingError (No route matches [GET] "/images/shops/1_logo.jpeg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/shops/get_detail?shopID=2&_=1388154522141" for 127.0.0.1 at 2013-12-27 22:28:42 +0800
+Processing by ShopsController#get_detail as JSON
+  Parameters: {"shopID"=>"2", "_"=>"1388154522141"}
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 2 LIMIT 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2
+  [1m[36mPrimaryBusiness Load (0.0ms)[0m  [1mSELECT `primary_businesses`.* FROM `primary_businesses` INNER JOIN `primary_businesses_shops` ON `primary_businesses`.`id` = `primary_businesses_shops`.`primary_business_id` WHERE `primary_businesses_shops`.`shop_id` = 2[0m
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:28:42 +0800
+
+ActionController::RoutingError (No route matches [GET] "/images/shops/2_logo.jpeg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:28:42 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:28:51 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:29:00 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:29:09 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:29:18 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:29:27 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:29:36 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:29:45 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:29:55 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:32:06 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3[0m
+  Rendered areas/show.html.erb within layouts/areas (437.5ms)
+Completed 200 OK in 953ms (Views: 687.5ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:07 +0800
+Served asset /recommendSup.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:07 +0800
+Served asset /common.css - 304 Not Modified (62ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:07 +0800
+Served asset /areas/search.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:07 +0800
+Served asset /main.css - 304 Not Modified (93ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /base.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /areas/common.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /lazyload.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/areas/default.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /areas/default.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /ads/ad2.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:32:08 +0800
+Served asset /ads/ad3.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:09 +0800
+Served asset /shops/1_logo.jpeg - 200 OK (15ms)
+
+
+Started GET "/images/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:09 +0800
+
+ActionController::RoutingError (No route matches [GET] "/images/shops/2_logo.jpeg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/images/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:09 +0800
+
+ActionController::RoutingError (No route matches [GET] "/images/shops/3_logo.jpeg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:32:09 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:32:09 +0800
+Served asset /loading.gif - 304 Not Modified (31ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-27 22:32:09 +0800
+Served asset /favicon.ico - 304 Not Modified (15ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:32:20 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:32:29 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:32:29 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3
+  Rendered areas/show.html.erb within layouts/areas (93.8ms)
+Completed 200 OK in 328ms (Views: 328.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /recommendSup.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /lazyload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/default.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /areas/default.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:32:30 +0800
+Served asset /ads/ad1.png - 200 OK (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:32:31 +0800
+Served asset /ads/ad2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:32:31 +0800
+Served asset /ads/ad3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:31 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:31 +0800
+Served asset /shops/2_logo.jpeg - 200 OK (46ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:32:31 +0800
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:31 +0800
+Served asset /shops/3_logo.jpeg - 200 OK (15ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:32:31 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-27 22:32:31 +0800
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/shops/get_detail?shopID=1&_=1388154755131" for 127.0.0.1 at 2013-12-27 22:32:35 +0800
+Processing by ShopsController#get_detail as JSON
+  Parameters: {"shopID"=>"1", "_"=>"1388154755131"}
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1
+  [1m[36mPrimaryBusiness Load (0.0ms)[0m  [1mSELECT `primary_businesses`.* FROM `primary_businesses` INNER JOIN `primary_businesses_shops` ON `primary_businesses`.`id` = `primary_businesses_shops`.`primary_business_id` WHERE `primary_businesses_shops`.`shop_id` = 1[0m
+Completed 200 OK in 31ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:35 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:32:36 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3
+  Rendered areas/show.html.erb within layouts/areas (93.8ms)
+Completed 200 OK in 312ms (Views: 312.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:36 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:36 +0800
+Served asset /recommendSup.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:36 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:36 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:36 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:36 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:36 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:36 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:36 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /lazyload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/default.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /areas/default.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /ads/ad2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /ads/ad3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /shops/2_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /shops/3_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-27 22:32:37 +0800
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/shops/get_detail?shopID=1&_=1388154762701" for 127.0.0.1 at 2013-12-27 22:32:42 +0800
+Processing by ShopsController#get_detail as JSON
+  Parameters: {"shopID"=>"1", "_"=>"1388154762701"}
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1
+  [1m[36mPrimaryBusiness Load (0.0ms)[0m  [1mSELECT `primary_businesses`.* FROM `primary_businesses` INNER JOIN `primary_businesses_shops` ON `primary_businesses`.`id` = `primary_businesses_shops`.`primary_business_id` WHERE `primary_businesses_shops`.`shop_id` = 1[0m
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:32:42 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/shop/1" for 127.0.0.1 at 2013-12-27 22:32:44 +0800
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE (shop_id = 1 and enable = 1)[0m
+Compiled shops/show.js  (0ms)  (pid 5468)
+Compiled json.js  (0ms)  (pid 5468)
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 1 and enable = 1)[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 2 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 3 and enable = 1)[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 4 and enable = 1)
+  Rendered shops/show.html.erb within layouts/shops (375.0ms)
+Completed 200 OK in 656ms (Views: 578.1ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/login.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Compiled login.css  (0ms)  (pid 5468)
+Served asset /login.css - 304 Not Modified (93ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/show.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /shops/show.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/json.js?body=1" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /json.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SupCarInfo.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Compiled SupCarInfo.js  (0ms)  (pid 5468)
+Served asset /SupCarInfo.js - 304 Not Modified (78ms)
+
+
+Started GET "/assets/food.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Compiled food.js  (0ms)  (pid 5468)
+Served asset /food.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/operate_cart.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Compiled operate_cart.js  (0ms)  (pid 5468)
+Served asset /operate_cart.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_new.png" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /foodType_new.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/foodType_sign.png" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /foodType_sign.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/base/s_tab.gif" for 127.0.0.1 at 2013-12-27 22:32:45 +0800
+Served asset /base/s_tab.gif - 304 Not Modified (15ms)
+
+
+Started GET "/assets/base/addFoodBtn.gif" for 127.0.0.1 at 2013-12-27 22:32:46 +0800
+Served asset /base/addFoodBtn.gif - 304 Not Modified (31ms)
+
+
+Started GET "/assets/base/web_sb.png" for 127.0.0.1 at 2013-12-27 22:32:46 +0800
+Served asset /base/web_sb.png - 304 Not Modified (46ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:32:46 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"1", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1
+  [1m[36mShop Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:32:46 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/base/order-btn.png" for 127.0.0.1 at 2013-12-27 22:32:46 +0800
+Served asset /base/order-btn.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/noSend_t.png" for 127.0.0.1 at 2013-12-27 22:32:46 +0800
+Served asset /noSend_t.png - 304 Not Modified (62ms)
+
+
+Started GET "/assets/base/top.png" for 127.0.0.1 at 2013-12-27 22:32:46 +0800
+Served asset /base/top.png - 304 Not Modified (31ms)
+
+
+Started GET "/assets/base/layer-bg.png" for 127.0.0.1 at 2013-12-27 22:32:46 +0800
+Served asset /base/layer-bg.png - 304 Not Modified (46ms)
+
+
+Started GET "/assets/main.png" for 127.0.0.1 at 2013-12-27 22:32:46 +0800
+Served asset /main.png - 304 Not Modified (15ms)
+
+
+Started GET "/area/1" for 127.0.0.1 at 2013-12-27 22:32:48 +0800
+
+ActionController::RoutingError (No route matches [GET] "/area/1"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:32:50 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:32:50 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"1", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Exists (0.0ms)[0m  SELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 1 LIMIT 1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:32:50 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:32:59 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:33:09 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:33:20 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:33:29 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:35:13 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3[0m
+  Rendered areas/show.html.erb within layouts/areas (406.2ms)
+Completed 200 OK in 906ms (Views: 625.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:14 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /recommendSup.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /common.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /lazyload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/default.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /areas/default.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /ads/ad2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (31ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:35:15 +0800
+Served asset /ads/ad3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:35:16 +0800
+Served asset /shops/2_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:35:16 +0800
+Served asset /shops/3_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:35:16 +0800
+Served asset /loading.gif - 304 Not Modified (15ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:35:16 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-27 22:35:16 +0800
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:35:29 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-12-27 22:35:31 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 2
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 3[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 4
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 5[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 6
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 7[0m
+  Rendered home/index.html.erb (46.9ms)
+Completed 200 OK in 62ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/nav.css?body=1" for 127.0.0.1 at 2013-12-27 22:35:31 +0800
+Served asset /nav.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:31 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:31 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2013-12-27 22:35:31 +0800
+Served asset /common.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:31 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/nav.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:31 +0800
+Served asset /home/nav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newnavi/logo.png" for 127.0.0.1 at 2013-12-27 22:35:31 +0800
+Served asset /newnavi/logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newnavi/title.png" for 127.0.0.1 at 2013-12-27 22:35:31 +0800
+Served asset /newnavi/title.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newnavi/dot.png" for 127.0.0.1 at 2013-12-27 22:35:31 +0800
+Served asset /newnavi/dot.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newnavi/back.png" for 127.0.0.1 at 2013-12-27 22:35:33 +0800
+Served asset /newnavi/back.png - 304 Not Modified (31ms)
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:35:34 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3
+  Rendered areas/show.html.erb within layouts/areas (187.5ms)
+Completed 200 OK in 391ms (Views: 375.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:34 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:34 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:34 +0800
+Served asset /recommendSup.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /lazyload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/default.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /areas/default.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /ads/ad2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /ads/ad3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /shops/2_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /shops/3_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:35:35 +0800
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/shops/get_detail?shopID=1&_=1388154938353" for 127.0.0.1 at 2013-12-27 22:35:38 +0800
+Processing by ShopsController#get_detail as JSON
+  Parameters: {"shopID"=>"1", "_"=>"1388154938353"}
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1
+  [1m[36mPrimaryBusiness Load (0.0ms)[0m  [1mSELECT `primary_businesses`.* FROM `primary_businesses` INNER JOIN `primary_businesses_shops` ON `primary_businesses`.`id` = `primary_businesses_shops`.`primary_business_id` WHERE `primary_businesses_shops`.`shop_id` = 1[0m
+Completed 200 OK in 31ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:35:38 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2013-12-27 22:35:38 +0800
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE (shop_id = 1 and enable = 1)[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 1 and enable = 1)[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 2 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 3 and enable = 1)[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 4 and enable = 1)
+  Rendered shops/show.html.erb within layouts/shops (328.1ms)
+Completed 200 OK in 578ms (Views: 515.6ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/show.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /shops/show.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/json.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /json.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SupCarInfo.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /SupCarInfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/food.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /food.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/operate_cart.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:35:39 +0800
+Served asset /operate_cart.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:35:40 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:35:40 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_new.png" for 127.0.0.1 at 2013-12-27 22:35:40 +0800
+Served asset /foodType_new.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_sign.png" for 127.0.0.1 at 2013-12-27 22:35:40 +0800
+Served asset /foodType_sign.png - 304 Not Modified (15ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:35:40 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"1", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1
+  [1m[36mShop Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:35:40 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/shops/get_detail?shopID=2&_=1388154940563" for 127.0.0.1 at 2013-12-27 22:35:40 +0800
+Processing by ShopsController#get_detail as JSON
+  Parameters: {"shopID"=>"2", "_"=>"1388154940563"}
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 2 LIMIT 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2[0m
+  [1m[35mPrimaryBusiness Load (0.0ms)[0m  SELECT `primary_businesses`.* FROM `primary_businesses` INNER JOIN `primary_businesses_shops` ON `primary_businesses`.`id` = `primary_businesses_shops`.`primary_business_id` WHERE `primary_businesses_shops`.`shop_id` = 2
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:35:40 +0800
+Served asset /shops/2_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/shops/get_detail?shopID=3&_=1388154941277" for 127.0.0.1 at 2013-12-27 22:35:41 +0800
+Processing by ShopsController#get_detail as JSON
+  Parameters: {"shopID"=>"3", "_"=>"1388154941277"}
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 3 LIMIT 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3
+  [1m[36mPrimaryBusiness Load (0.0ms)[0m  [1mSELECT `primary_businesses`.* FROM `primary_businesses` INNER JOIN `primary_businesses_shops` ON `primary_businesses`.`id` = `primary_businesses_shops`.`primary_business_id` WHERE `primary_businesses_shops`.`shop_id` = 3[0m
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:35:41 +0800
+Served asset /shops/3_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:35:51 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-12-27 22:35:53 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 2
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 3[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 4
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 5[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 6
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 7[0m
+  Rendered home/index.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/nav.css?body=1" for 127.0.0.1 at 2013-12-27 22:35:53 +0800
+Served asset /nav.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:53 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:53 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:53 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2013-12-27 22:35:53 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/nav.js?body=1" for 127.0.0.1 at 2013-12-27 22:35:53 +0800
+Served asset /home/nav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newnavi/title.png" for 127.0.0.1 at 2013-12-27 22:35:53 +0800
+Served asset /newnavi/title.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newnavi/logo.png" for 127.0.0.1 at 2013-12-27 22:35:54 +0800
+Served asset /newnavi/logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newnavi/dot.png" for 127.0.0.1 at 2013-12-27 22:35:54 +0800
+Served asset /newnavi/dot.png - 304 Not Modified (0ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:35:55 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"1", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Exists (0.0ms)[0m  SELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 1 LIMIT 1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:35:55 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/area/1" for 127.0.0.1 at 2013-12-27 22:35:56 +0800
+
+ActionController::RoutingError (No route matches [GET] "/area/1"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:35:59 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"1", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1
+  [1m[36mShop Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:35:59 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:36:01 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/shops/comment/1" for 127.0.0.1 at 2013-12-27 22:36:04 +0800
+
+ActionController::RoutingError (No route matches [GET] "/shops/comment/1"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:36:05 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"1", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mShop Load (15.6ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Exists (0.0ms)[0m  SELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 1 LIMIT 1
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:36:05 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2013-12-27 22:36:06 +0800
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE (shop_id = 1 and enable = 1)
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 1 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 2 and enable = 1)[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 3 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFood Load (15.6ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 4 and enable = 1)[0m
+  Rendered shops/show.html.erb within layouts/shops (203.1ms)
+Completed 200 OK in 391ms (Views: 375.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/show.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /shops/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/json.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /json.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SupCarInfo.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /SupCarInfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/food.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /food.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/operate_cart.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /operate_cart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_new.png" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /foodType_new.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_sign.png" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Served asset /foodType_sign.png - 304 Not Modified (0ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"1", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Exists (0.0ms)[0m  SELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 1 LIMIT 1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:36:07 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2013-12-27 22:36:08 +0800
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE (shop_id = 1 and enable = 1)
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 1 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 2 and enable = 1)[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFood Load (15.6ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 3 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 4 and enable = 1)[0m
+  Rendered shops/show.html.erb within layouts/shops (203.1ms)
+Completed 200 OK in 375ms (Views: 359.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/show.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /shops/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/json.js?body=1" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /json.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SupCarInfo.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /SupCarInfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/food.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /food.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/operate_cart.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /operate_cart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_new.png" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /foodType_new.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_sign.png" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Served asset /foodType_sign.png - 304 Not Modified (0ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"1", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Exists (0.0ms)[0m  SELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 1 LIMIT 1
+Completed 200 OK in 31ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:36:09 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:36:10 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:36:20 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:36:29 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:36:38 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2013-12-27 22:38:45 +0800
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE (shop_id = 1 and enable = 1)
+Compiled shops/show.js  (0ms)  (pid 4224)
+Compiled areas/common.js  (15ms)  (pid 4224)
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 1 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 2 and enable = 1)[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 3 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 4 and enable = 1)[0m
+  Rendered shops/show.html.erb within layouts/shops (531.2ms)
+Completed 200 OK in 1031ms (Views: 718.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /main.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /base.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /common.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/login.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/show.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /shops/show.js - 200 OK (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:46 +0800
+Served asset /areas/common.js - 200 OK (0ms)
+
+
+Started GET "/assets/json.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:47 +0800
+Served asset /json.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/SupCarInfo.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:38:47 +0800
+Served asset /SupCarInfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/food.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:38:47 +0800
+Served asset /food.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/operate_cart.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:38:47 +0800
+Compiled operate_cart.js  (0ms)  (pid 4224)
+Served asset /operate_cart.js - 200 OK (62ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:38:47 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:38:47 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_sign.png" for 127.0.0.1 at 2013-12-27 22:38:47 +0800
+Served asset /foodType_sign.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_new.png" for 127.0.0.1 at 2013-12-27 22:38:47 +0800
+Served asset /foodType_new.png - 304 Not Modified (15ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:38:47 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"1", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Exists (0.0ms)[0m  SELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 1 LIMIT 1
+Completed 200 OK in 47ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:38:47 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:38:51 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:38:52 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3[0m
+  Rendered areas/show.html.erb within layouts/areas (109.4ms)
+Completed 200 OK in 297ms (Views: 296.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /recommendSup.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/default.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Compiled areas/default.js  (0ms)  (pid 4224)
+Served asset /areas/default.js - 200 OK (31ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /lazyload.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /ads/ad2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /ads/ad3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:38:53 +0800
+Served asset /shops/2_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:38:54 +0800
+Served asset /shops/3_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:38:54 +0800
+Served asset /loading.gif - 304 Not Modified (15ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:38:54 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-12-27 22:38:58 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+Compiled home/nav.js  (0ms)  (pid 4224)
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 2
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 3[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 4
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 5[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 6
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 7[0m
+  Rendered home/index.html.erb (46.9ms)
+Completed 200 OK in 109ms (Views: 62.5ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:58 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2013-12-27 22:38:58 +0800
+Served asset /common.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:58 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/nav.css?body=1" for 127.0.0.1 at 2013-12-27 22:38:58 +0800
+Served asset /nav.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:58 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/nav.js?body=1" for 127.0.0.1 at 2013-12-27 22:38:58 +0800
+Served asset /home/nav.js - 200 OK (15ms)
+
+
+Started GET "/assets/newnavi/logo.png" for 127.0.0.1 at 2013-12-27 22:38:58 +0800
+Served asset /newnavi/logo.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/newnavi/title.png" for 127.0.0.1 at 2013-12-27 22:38:58 +0800
+Served asset /newnavi/title.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newnavi/dot.png" for 127.0.0.1 at 2013-12-27 22:38:58 +0800
+Served asset /newnavi/dot.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newnavi/back.png" for 127.0.0.1 at 2013-12-27 22:38:59 +0800
+Served asset /newnavi/back.png - 304 Not Modified (0ms)
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1[0m
+  [1m[35mShopHour Load (15.6ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3
+  Rendered areas/show.html.erb within layouts/areas (109.4ms)
+Completed 200 OK in 312ms (Views: 296.9ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /recommendSup.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /lazyload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:39:00 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:39:01 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:39:01 +0800
+Served asset /ads/ad2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:39:01 +0800
+Served asset /ads/ad3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:01 +0800
+Served asset /shops/2_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:01 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:01 +0800
+Served asset /shops/3_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:39:01 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:39:01 +0800
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:39:01 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:39:08 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:39:11 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3[0m
+  Rendered areas/show.html.erb within layouts/areas (93.8ms)
+Completed 200 OK in 297ms (Views: 296.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:11 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:11 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:11 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /recommendSup.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /lazyload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/default.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /areas/default.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /ads/ad2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /ads/ad3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /shops/2_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /shops/3_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:39:12 +0800
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/shops/get_detail?shopID=1&_=1388155158989" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Processing by ShopsController#get_detail as JSON
+  Parameters: {"shopID"=>"1", "_"=>"1388155158989"}
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mPrimaryBusiness Load (0.0ms)[0m  SELECT `primary_businesses`.* FROM `primary_businesses` INNER JOIN `primary_businesses_shops` ON `primary_businesses`.`id` = `primary_businesses_shops`.`primary_business_id` WHERE `primary_businesses_shops`.`shop_id` = 1
+Completed 200 OK in 62ms (Views: 0.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/shops/1" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE (shop_id = 1 and enable = 1)
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 1 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 2 and enable = 1)[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 3 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mFood Load (15.6ms)[0m  [1mSELECT `foods`.* FROM `foods` WHERE (food_type_id = 4 and enable = 1)[0m
+  Rendered shops/show.html.erb within layouts/shops (203.1ms)
+Completed 200 OK in 391ms (Views: 375.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/show.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:19 +0800
+Served asset /shops/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/json.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /json.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SupCarInfo.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /SupCarInfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/food.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /food.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/operate_cart.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /operate_cart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_new.png" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /foodType_new.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foodType_sign.png" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Served asset /foodType_sign.png - 304 Not Modified (0ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"1", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 1 LIMIT 1
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Exists (0.0ms)[0m  SELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 1 LIMIT 1
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:39:20 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:39:25 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:39:25 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1[0m
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3[0m
+  Rendered areas/show.html.erb within layouts/areas (93.8ms)
+Completed 200 OK in 281ms (Views: 281.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /recommendSup.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /lazyload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/default.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /areas/default.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /ads/ad2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /ads/ad3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /shops/2_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /shops/3_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:39:26 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/shops/get_detail?shopID=2&_=1388155167629" for 127.0.0.1 at 2013-12-27 22:39:27 +0800
+Processing by ShopsController#get_detail as JSON
+  Parameters: {"shopID"=>"2", "_"=>"1388155167629"}
+  [1m[35mShop Load (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 2 LIMIT 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2[0m
+  [1m[35mPrimaryBusiness Load (0.0ms)[0m  SELECT `primary_businesses`.* FROM `primary_businesses` INNER JOIN `primary_businesses_shops` ON `primary_businesses`.`id` = `primary_businesses_shops`.`primary_business_id` WHERE `primary_businesses_shops`.`shop_id` = 2
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:27 +0800
+Served asset /shops/2_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/shops/2" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 2 LIMIT 1[0m
+  [1m[35mFoodType Load (0.0ms)[0m  SELECT `food_types`.* FROM `food_types` WHERE (shop_id = 2 and enable = 1)
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2[0m
+  [1m[35mFood Load (0.0ms)[0m  SELECT `foods`.* FROM `foods` WHERE (food_type_id = 5 and enable = 1)
+  [1m[36mFoodType Load (0.0ms)[0m  [1mSELECT `food_types`.* FROM `food_types` WHERE `food_types`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 2 LIMIT 1
+  Rendered shops/show.html.erb within layouts/shops (171.9ms)
+Completed 200 OK in 359ms (Views: 343.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/show.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /shops/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/json.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /json.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SupCarInfo.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /SupCarInfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/food.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /food.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/operate_cart.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /operate_cart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started POST "/areas/check_shop" for 127.0.0.1 at 2013-12-27 22:39:28 +0800
+Processing by AreasController#check_shop as */*
+  Parameters: {"supID"=>"2", "areaID"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` WHERE `shops`.`id` = 2 LIMIT 1[0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1
+  [1m[36mShop Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1 AND `shops`.`id` = 2 LIMIT 1[0m
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:39:29 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/no_food.png" for 127.0.0.1 at 2013-12-27 22:39:30 +0800
+Served asset /no_food.png - 200 OK (78ms)
+
+
+Started GET "/areas/1" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Processing by AreasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 1 LIMIT 1
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT `shops`.* FROM `shops` INNER JOIN `areas_shops` ON `shops`.`id` = `areas_shops`.`shop_id` WHERE `areas_shops`.`area_id` = 1[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 1
+  [1m[36mShopHour Load (0.0ms)[0m  [1mSELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 2[0m
+  [1m[35mShopHour Load (0.0ms)[0m  SELECT `shop_hours`.* FROM `shop_hours` WHERE `shop_hours`.`shop_id` = 3
+  Rendered areas/show.html.erb within layouts/areas (125.0ms)
+Completed 200 OK in 297ms (Views: 296.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/base.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/recommendSup.css?v4.1.7.css" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /recommendSup.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /jquery-1.7.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/search.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /areas/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/top_js.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /areas/top_js.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /jquery.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/set_cookie.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /areas/set_cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/recommendSup.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /areas/recommendSup.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.XYTipsWindow.2.8.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /jquery.XYTipsWindow.2.8.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/common.js?body=1" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /areas/common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lazyload.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /lazyload.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/default.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /areas/default.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas/getfoodbyrandom.js?v4.1.7.js" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /areas/getfoodbyrandom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/iDeal.visitRecord.js?webId=2&channel=1&pageType=1" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /home/iDeal.visitRecord.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tranlogo.png" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /tranlogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad1.png" for 127.0.0.1 at 2013-12-27 22:39:32 +0800
+Served asset /ads/ad1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad3.png" for 127.0.0.1 at 2013-12-27 22:39:33 +0800
+Served asset /ads/ad3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ads/ad2.png" for 127.0.0.1 at 2013-12-27 22:39:33 +0800
+Served asset /ads/ad2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/1_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:33 +0800
+Served asset /shops/1_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/3_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:33 +0800
+Served asset /shops/3_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shops/2_logo.jpeg" for 127.0.0.1 at 2013-12-27 22:39:33 +0800
+Served asset /shops/2_logo.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2013-12-27 22:39:33 +0800
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started POST "/ajax/Notice/GetUnReadMessageByUserID.ashx" for 127.0.0.1 at 2013-12-27 22:39:33 +0800
+
+ActionController::RoutingError (No route matches [POST] "/ajax/Notice/GetUnReadMessageByUserID.ashx"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)

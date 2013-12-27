@@ -3,7 +3,6 @@ Fandian::Application.routes.draw do
   match 'order/success/:id' => "orders#success"
   match 'order/SendOrder' => "orders#SendOrder"
   match 'order/checkout' => "orders#checkout"
-  match 'shop/:id' => "shops#show"
   match 'shops/get_detail' => "shops#get_detail"
   match '/areas/check_shop' => "areas#check_shop"
   match '/home' => "home#index"
